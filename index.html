@@ -292,6 +292,37 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
 <body>
 
 <!-- SIDEBAR -->
+<script>
+(function(){
+  var stored = sessionStorage.getItem('abhyas_auth');
+  if(stored === 'ok') return;
+  var overlay = document.createElement('div');
+  overlay.id = 'auth-overlay';
+  overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:#F8FAFC;display:flex;align-items:center;justify-content:center;z-index:99999;font-family:DM Sans,sans-serif';
+  overlay.innerHTML = `
+    <div style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:16px;padding:40px 48px;text-align:center;max-width:360px;width:90%;box-shadow:0 4px 24px rgba(0,0,0,0.08)">
+      <div style="width:44px;height:44px;background:#1E3A5F;border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:22px">🔐</div>
+      <div style="font-size:20px;font-weight:700;color:#0F172A;margin-bottom:6px">Abhyas Roadmap</div>
+      <div style="font-size:13px;color:#64748B;margin-bottom:24px">Enter password to continue</div>
+      <input id="pw-input" type="password" placeholder="Password"
+        style="width:100%;padding:10px 14px;border:1.5px solid #E2E8F0;border-radius:8px;font-size:14px;outline:none;box-sizing:border-box;font-family:inherit;color:#0F172A;margin-bottom:12px"
+        onkeydown="if(event.key==='Enter') document.getElementById('pw-btn').click()"
+      />
+      <div id="pw-error" style="color:#DC2626;font-size:12px;margin-bottom:10px;display:none">Incorrect password</div>
+      <button id="pw-btn"
+        style="width:100%;padding:10px;background:#2563EB;color:white;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit"
+        onclick="(function(){
+          var v=document.getElementById('pw-input').value;
+          if(v==='Bottle@1234'){sessionStorage.setItem('abhyas_auth','ok');document.getElementById('auth-overlay').remove();}
+          else{var e=document.getElementById('pw-error');e.style.display='block';document.getElementById('pw-input').value='';document.getElementById('pw-input').focus();}
+        })()"
+      >Enter</button>
+      <div style="margin-top:16px;font-size:11px;color:#94A3B8">Abhyas Education Technology Platform</div>
+    </div>`;
+  document.body ? document.body.appendChild(overlay) : document.addEventListener('DOMContentLoaded',function(){document.body.appendChild(overlay)});
+  setTimeout(function(){var i=document.getElementById('pw-input');if(i)i.focus();},100);
+})();
+</script>
 <nav class="sidebar">
   <div class="sidebar-logo">
     <div style="display:flex;align-items:center;gap:0;padding:0 0 8px 0">
