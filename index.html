@@ -2651,6 +2651,56 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
       <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Prepare Abhyas origin story slide — Durbar High School → Nepal education → Abhyas today</div></div><div class="task-right"><span class="priority-p2">P2</span><span class="pill pill-amber">This week</span><span class="task-due">Suraj</span></div></div>
       <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Build class-count revenue model — assumptions for all scenarios, not just municipality count</div></div><div class="task-right"><span class="priority-p2">P2</span><span class="pill pill-amber">This week</span><span class="task-due">Bimochan</span></div></div>
     </div>
+
+    <!-- TEACHER IDEAS -->
+    <div class="section-head"><h2 class="section-title">Ideas from teachers — field feedback</h2><div class="section-line"></div><span class="section-tag">Collected from Gokarneshwor schools · Jun 2026</span></div>
+
+    <div class="info-box info-green">These ideas came directly from teachers during the Jun 18 school visits. They represent real pain points and wishlist items from the people actually using the platform. High signal — teachers who are engaged enough to suggest improvements are the ones most likely to adopt.</div>
+
+    <table class="growth-table">
+      <thead><tr><th>#</th><th>Teacher idea</th><th>What it solves</th><th>Product fit</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr style="background:#EFF6FF">
+          <td><span class="num-badge">1</span></td>
+          <td>
+            <strong>AI-generated lesson plans with homework &amp; assignment questions</strong><br>
+            <span style="font-size:11px;color:#64748B">Teacher inputs topic → AI generates a structured lesson plan including homework questions and assignments for student understanding</span>
+          </td>
+          <td style="font-size:12px;color:#334155">Reduces lesson preparation time significantly. Teachers in government schools have no dedicated planning time — if Abhyas can auto-generate a lesson plan, the barrier to teaching drops dramatically.</td>
+          <td><span class="pill pill-purple">P3b — AI Features (Aug 2026)</span><br><span style="font-size:11px;color:#64748B;margin-top:4px;display:block">Extends the AI chatbot planning assistant. Add lesson plan generation + auto-homework question generation as core outputs.</span></td>
+          <td><span class="pill pill-red">High — directly addresses H4 (tech adoption barrier)</span></td>
+        </tr>
+        <tr style="background:#FEF2F2">
+          <td><span class="num-badge">2</span></td>
+          <td>
+            <strong>Content protection — teachers worried their materials will be copied or stolen</strong><br>
+            <span style="font-size:11px;color:#64748B">Teachers are reluctant to upload content they've spent time creating because they fear others (students, other teachers, other platforms) will take it without credit or compensation</span>
+          </td>
+          <td style="font-size:12px;color:#334155">This is a trust and adoption blocker. If teachers don't feel safe uploading content, the platform stays empty. Especially relevant as the Live Tuition marketplace grows — teachers' content is their product.</td>
+          <td><span class="pill pill-amber">Compliance + Product (P1c + future)</span><br><span style="font-size:11px;color:#64748B;margin-top:4px;display:block">Short term: Terms &amp; Conditions must explicitly state content ownership stays with teacher (add to P1c July compliance). Long term: content watermarking, view-only mode, download controls.</span></td>
+          <td><span class="pill pill-red">High — trust blocker for content upload</span></td>
+        </tr>
+        <tr style="background:#ECFDF5">
+          <td><span class="num-badge">3</span></td>
+          <td>
+            <strong>Graphical tools inside video conferencing — diagrams, bar charts, pie charts</strong><br>
+            <span style="font-size:11px;color:#64748B">Teachers want to draw and display data visually during live class — bar charts, pie charts, flow diagrams — without leaving the Abhyas screen or switching to another tool</span>
+          </td>
+          <td style="font-size:12px;color:#334155">Currently teachers use the smart board as a whiteboard with marker only (H8 issue). A built-in graphical tool would enable proper data-driven teaching, especially for Maths and Science subjects. Reduces dependency on physical markers and improves HRDC streaming quality.</td>
+          <td><span class="pill pill-blue">Classrooms Module scope expansion (P1b)</span><br><span style="font-size:11px;color:#64748B;margin-top:4px;display:block">Add to Rahul's Classrooms Figma scope: interactive diagram/chart tool inside the live class view. Could use a lightweight library (Chart.js, Excalidraw) embedded in the session.</span></td>
+          <td><span class="pill pill-amber">Medium — enhances live class quality significantly</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="task-group">
+      <div class="task-group-header"><span>Actions from teacher ideas</span></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Add content ownership clause to T&Cs — teacher retains all rights to uploaded content</div><div class="task-note">Addresses teacher fear immediately. Low effort, high trust impact. Add to P1c compliance scope — must be in the July release T&Cs.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-red">July release (P1c)</span><span class="task-due">Suraj / Legal</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Add AI lesson plan generation + homework question generation to P3b AI Features scope</div><div class="task-note">Teacher inputs: subject + topic + class level → AI outputs: structured lesson plan + 5–10 homework questions. Core output of the AI chatbot planning assistant.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-purple">P3b scope — Aug 2026</span><span class="task-due">Suraj / Dev</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Add graphical tools to Classrooms Figma scope — bar chart, pie chart, diagram tool in live class view</div><div class="task-note">Flag to Rahul before Jun 30 Figma deadline. Lightweight embedded tool — does not need to be fully custom, can use an existing library.</div></div><div class="task-right"><span class="priority-p2">P2</span><span class="pill pill-blue">P1b Classrooms scope</span><span class="task-due">Rahul</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Design content protection features — watermarking, view-only mode, download controls (post-July backlog)</div><div class="task-note">Long-term trust feature. Short-term: T&Cs clause is enough to address the concern. Watermarking and download controls come after July release.</div></div><div class="task-right"><span class="priority-p3">P3</span><span class="pill pill-gray">Post-July backlog</span><span class="task-due">Dev / Rahul</span></div></div>
+    </div>
+
     <div class="task-group">
       <div class="task-group-header"><span>Product backlog — needs scope before build</span></div>
       <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Design teacher wallet + Rs. 80/class tracking in Abhyas dashboard</div><div class="task-note">Teacher sees: classes taught, earnings accumulated, withdrawal button (activates at Rs. 1,000). Rahul to design in next Figma sprint.</div></div><div class="task-right"><span class="priority-p2">P2</span><span class="pill pill-blue">Figma scope</span><span class="task-due">Rahul</span></div></div>
