@@ -396,7 +396,7 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
     <a class="nav-item" onclick="showPage('issues',this)">
       <span class="nav-icon">🔎</span>
       <span class="nav-label">Implementation Issues</span>
-      <span class="nav-badge badge-red">26</span>
+      <span class="nav-badge badge-red">27</span>
     </a>
     <div class="nav-section">Strategy</div>
     <a class="nav-item" onclick="showPage('scale',this)">
@@ -2108,7 +2108,7 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
         <div style="font-family:var(--font-mono);font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:4px">Product Manager · Gokarneshwor Municipality</div>
         <h2 style="font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--navy)">Implementation Issues Log</h2>
       </div>
-      <span class="visit-date-chip" style="font-size:11px;padding:5px 12px">Jun 18, 2026 · 26 issues tracked</span>
+      <span class="visit-date-chip" style="font-size:11px;padding:5px 12px">Jun 18, 2026 · 27 issues tracked</span>
     </div>
 
     <div class="info-box info-blue">All issues documented from Abhyas deployment across Gokarneshwor Municipality schools — Khagendra, Chamunda, Tarabhir, Okhreni. Categorised by type: Technical (platform bugs), Infrastructure (school environment), Human (people & behaviour), Organisational (inter-school dynamics). Each has an owner, severity, and recommended action.</div>
@@ -2224,11 +2224,11 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
         </tr>
         <tr>
           <td style="font-weight:700">T14</td>
-          <td><strong>Students cannot find or join/register to class — time-bound registration confusing</strong><br><span style="font-size:11px;color:#64748B">"Maile register nai garna payena dhila vayo" — registration window closes, students locked out</span></td>
+          <td><strong>Registration closes 10 mins before class — students who haven't pre-enrolled are locked out entirely</strong><br><span style="font-size:11px;color:#64748B">"Maile register nai garna payena dhila vayo" — students who want to join at class time cannot, even if seats are available. 10-min cutoff is too strict for community school context where students are not used to pre-enrolling.</span></td>
           <td><span class="pill pill-red">All schools</span></td>
           <td><span class="pill pill-red">High</span></td>
           <td>Dev / Rahul</td>
-          <td style="font-size:12px;color:#334155">Simplify join flow. Extend or remove time-bound registration limit. P1 — Classrooms module</td>
+          <td style="font-size:12px;color:#334155">Allow walk-in joining up to class start time (or even mid-class). Make pre-enrollment optional, not mandatory. P1 — Classrooms module</td>
         </tr>
         <tr>
           <td style="font-weight:700">T15</td>
@@ -2245,6 +2245,14 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
           <td><span class="pill pill-amber">Medium</span></td>
           <td>Dev</td>
           <td style="font-size:12px;color:#334155">Review and increase registration cap or remove limit for school classes. Backlog.</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700">T17</td>
+          <td><strong>Recordings only visible to registered students — non-enrolled students cannot access</strong><br><span style="font-size:11px;color:#64748B">Recorded classes are locked to the registered student list only. Students who missed registration (locked out by 10-min rule) also miss the recording. Limits reach of content significantly — especially for HRDC and Bajura remote students who may not always be pre-enrolled.</span></td>
+          <td><span class="pill pill-amber">All schools</span></td>
+          <td><span class="pill pill-amber">Medium</span></td>
+          <td>Dev</td>
+          <td style="font-size:12px;color:#334155">Add recording visibility setting: <strong>Class only</strong> (current) / <strong>All enrolled students in school</strong> / <strong>Anyone with link</strong>. Teacher chooses. Default should be open for community school context. P1 — Classrooms module</td>
         </tr>
       </tbody>
     </table>
@@ -2439,7 +2447,7 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
         <div style="font-size:10px;color:#64748B;margin-top:3px">T3 T4 T5 T10 T13 T14 T15 H3 H5 H7 O4</div>
       </div>
       <div style="background:#FFFBEB;border:1px solid #FDE68A;border-radius:8px;padding:14px;text-align:center">
-        <div style="font-family:var(--font-display);font-size:28px;font-weight:700;color:var(--amber)">4</div>
+        <div style="font-family:var(--font-display);font-size:28px;font-weight:700;color:var(--amber)">5</div>
         <div style="font-size:11px;color:#92400E;font-weight:500">Medium</div>
         <div style="font-size:10px;color:#64748B;margin-top:3px">T6 T7 T8 I4 H4 O2 O3</div>
       </div>
@@ -2695,6 +2703,8 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
 
     <div class="task-group">
       <div class="task-group-header"><span>Actions from teacher ideas</span></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Remove 10-min registration cutoff — allow students to join at class time without pre-enrollment</div><div class="task-note">Current: registration closes 10 mins before class. Students who didn't pre-enroll are locked out. Fix: make pre-enrollment optional. Allow walk-in joining up to class start (or mid-class). P1 Classrooms module scope.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-red">P1b Classrooms</span><span class="task-due">Dev / Rahul</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Add recording visibility setting — "Class only" / "School" / "Anyone with link" — teacher chooses</div><div class="task-note">Currently recordings are locked to registered students only. For community schools and HRDC, recordings should be open by default. Teacher can restrict if needed. P1 Classrooms scope.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-blue">P1b Classrooms</span><span class="task-due">Dev / Rahul</span></div></div>
       <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Add content ownership clause to T&Cs — teacher retains all rights to uploaded content</div><div class="task-note">Addresses teacher fear immediately. Low effort, high trust impact. Add to P1c compliance scope — must be in the July release T&Cs.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-red">July release (P1c)</span><span class="task-due">Suraj / Legal</span></div></div>
       <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Add AI lesson plan generation + homework question generation to P3b AI Features scope</div><div class="task-note">Teacher inputs: subject + topic + class level → AI outputs: structured lesson plan + 5–10 homework questions. Core output of the AI chatbot planning assistant.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-purple">P3b scope — Aug 2026</span><span class="task-due">Suraj / Dev</span></div></div>
       <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Add graphical tools to Classrooms Figma scope — bar chart, pie chart, diagram tool in live class view</div><div class="task-note">Flag to Rahul before Jun 30 Figma deadline. Lightweight embedded tool — does not need to be fully custom, can use an existing library.</div></div><div class="task-right"><span class="priority-p2">P2</span><span class="pill pill-blue">P1b Classrooms scope</span><span class="task-due">Rahul</span></div></div>
