@@ -417,6 +417,11 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
       <span class="nav-icon">✓</span>
       <span class="nav-label">Decisions Log</span>
     </a>
+    <a class="nav-item" onclick="showPage('ideas',this)">
+      <span class="nav-icon">💡</span>
+      <span class="nav-label">Strategic Ideas</span>
+      <span class="nav-badge badge-purple">New</span>
+    </a>
     <a class="nav-item" onclick="showPage('schems',this)">
       <span class="nav-icon">📄</span>
       <span class="nav-label">SchEMS MOU</span>
@@ -2303,7 +2308,7 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
           <td><span class="pill pill-red">Khagendra</span></td>
           <td><span class="pill pill-red">Critical</span></td>
           <td>Abi / Suraj</td>
-          <td style="font-size:12px;color:#991B1B">Define teacher incentive structure before FY end. Partner network (Ncell, Tricity etc.) to fund. Attendance + outcome data being collected now to build the case.</td>
+          <td style="font-size:12px;color:#991B1B"><strong>Model defined: Rs. 80/class, withdraw at Rs. 1,000 (13 classes).</strong> Who funds it and eSewa/Khalti integration still to resolve. See Strategic Ideas page for full model.</td>
         </tr>
         <tr>
           <td style="font-weight:700">H2</td>
@@ -2448,6 +2453,164 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
     <div class="info-box info-red"><strong>PM note — Jun 18:</strong> The Jun 18 visit revealed that <strong>teacher adoption is the number one risk</strong> across all schools — not product, not infrastructure. Only Kiran Dhital Sir has used Abhyas independently. Every class has been run with Abhyas team on-site. This is not scalable. Three compounding issues: <strong>H6 (groupism — teachers won't learn from peers)</strong>, <strong>H7 (principal not championing)</strong>, and <strong>H9 (no independent adoption)</strong>. The platform is currently a demo tool, not a teaching tool. Until a teacher runs a class without the Abhyas team present, the product has not been adopted. The infrastructure issues (T10–T15) are real but secondary — even with perfect connectivity, if teachers don't use the platform independently the deployment fails. <strong>O4 (government teacher constraints)</strong> and <strong>O1 (inter-school competition)</strong> mean municipality-level directive + financial incentives are the only sustainable levers.</div>
   </div>
 
+  <!-- ═══ STRATEGIC IDEAS PAGE ═══ -->
+  <div class="page" id="page-ideas">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+      <div>
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:4px">Internal Discussion — Jun 2026</div>
+        <h2 style="font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--navy)">Strategic Ideas & Initiatives</h2>
+      </div>
+      <span class="visit-date-chip">Jun 18, 2026</span>
+    </div>
+
+    <div class="info-box info-purple">Ideas discussed internally for Abhyas growth, teacher incentives, and product direction. These are not yet confirmed features — they need scope definition, budget, and product approval before development starts.</div>
+
+    <!-- TEACHER INCENTIVE MODEL -->
+    <div class="section-head"><h2 class="section-title">Teacher earning & incentive model</h2><div class="section-line"></div><span class="section-tag">Core retention lever · Directly addresses H1 Sunday class risk</span></div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px">
+      <div style="background:#ECFDF5;border:1px solid #A7F3D0;border-radius:10px;padding:16px;text-align:center">
+        <div style="font-family:var(--font-display);font-size:36px;font-weight:700;color:#065F46">Rs. 80</div>
+        <div style="font-size:12px;color:#065F46;font-weight:600;margin-top:4px">Per class conducted</div>
+        <div style="font-size:11px;color:#64748B;margin-top:4px">Any class taught through Abhyas platform</div>
+      </div>
+      <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:10px;padding:16px;text-align:center">
+        <div style="font-family:var(--font-display);font-size:36px;font-weight:700;color:#1E40AF">Rs. 1,000</div>
+        <div style="font-size:12px;color:#1E40AF;font-weight:600;margin-top:4px">Minimum withdrawal</div>
+        <div style="font-size:11px;color:#64748B;margin-top:4px">Teacher can withdraw once balance reaches Rs. 1,000</div>
+      </div>
+      <div style="background:#F5F3FF;border:1px solid #DDD6FE;border-radius:10px;padding:16px;text-align:center">
+        <div style="font-family:var(--font-display);font-size:36px;font-weight:700;color:#5B21B6">13</div>
+        <div style="font-size:12px;color:#5B21B6;font-weight:600;margin-top:4px">Classes to first withdrawal</div>
+        <div style="font-size:11px;color:#64748B;margin-top:4px">13 × Rs. 80 = Rs. 1,040 → eligible to withdraw</div>
+      </div>
+    </div>
+
+    <div class="visit-report-card">
+      <div class="visit-report-header"><div class="visit-report-title">📐 How the model works</div></div>
+      <div class="finding-block">
+        <div class="finding-text">
+          <div class="insight-row"><span class="insight-icon">1️⃣</span><div class="insight-body"><strong>Teacher conducts a class through Abhyas</strong> — live or recorded, any subject, any school.</div></div>
+          <div class="insight-row"><span class="insight-icon">2️⃣</span><div class="insight-body"><strong>Rs. 80 is credited</strong> to the teacher's Abhyas wallet after the class is completed.</div></div>
+          <div class="insight-row"><span class="insight-icon">3️⃣</span><div class="insight-body"><strong>Balance accumulates</strong> — teacher sees their running total in the Abhyas dashboard.</div></div>
+          <div class="insight-row"><span class="insight-icon">4️⃣</span><div class="insight-body"><strong>Once balance reaches Rs. 1,000</strong> — withdrawal button activates. Teacher withdraws via eSewa or Khalti.</div></div>
+          <div class="insight-row"><span class="insight-icon">5️⃣</span><div class="insight-body"><strong>Cycle repeats</strong> — teacher keeps teaching, keeps earning. Sunday classes become financially worthwhile.</div></div>
+        </div>
+      </div>
+      <div class="finding-block">
+        <div class="finding-label"><span class="risk-chip rc-blue">Impact on Sunday classes</span></div>
+        <div class="finding-text">
+          <div class="insight-row"><span class="insight-icon">💡</span><div class="insight-body">Current risk: Sunday class program expires Ashadh 2083 — teachers participate voluntarily with no compensation. With Rs. 80/class: <strong>1 Sunday class/week × 4 weeks = Rs. 320/month. 3 months = Rs. 960 — nearly 1 withdrawal.</strong> This gives teachers a tangible reason to commit beyond the fiscal year.</div></div>
+        </div>
+      </div>
+      <div class="finding-block">
+        <div class="finding-label"><span class="risk-chip rc-amber">Open questions — needs definition</span></div>
+        <div class="finding-text">
+          <div class="insight-row"><span class="insight-icon">❓</span><div class="insight-body">Who funds the Rs. 80/class? Is it the municipality subscription, partner network (Ncell/Tricity), or Abhyas directly?</div></div>
+          <div class="insight-row"><span class="insight-icon">❓</span><div class="insight-body">How is a "completed class" defined — minimum duration? Minimum attendance?</div></div>
+          <div class="insight-row"><span class="insight-icon">❓</span><div class="insight-body">eSewa/Khalti integration — what compliance is needed? (Phase 4 Live Tuition already researching this)</div></div>
+          <div class="insight-row"><span class="insight-icon">❓</span><div class="insight-body">Abuse prevention — what stops a teacher from creating empty classes to earn Rs. 80?</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEACHER GROWTH PROGRAM -->
+    <div class="section-head"><h2 class="section-title">Teacher growth & referral program</h2><div class="section-line"></div></div>
+    <table class="growth-table">
+      <thead><tr><th>#</th><th>Initiative</th><th>How it works</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="num-badge">1</span></td>
+          <td><strong>Rs. 80/class earning</strong></td>
+          <td>Base earning model. Teach on Abhyas → earn. Withdraw at Rs. 1,000.</td>
+          <td><span class="pill pill-amber">Define scope</span></td>
+        </tr>
+        <tr>
+          <td><span class="num-badge">2</span></td>
+          <td><strong>Kiran Sir champion program</strong></td>
+          <td>Kiran Dhital Sir (Khagendra) as first Abhyas teacher champion — incentivise his classes, use his story for recruitment. He is the only teacher currently teaching independently.</td>
+          <td><span class="pill pill-red">Start now</span></td>
+        </tr>
+        <tr>
+          <td><span class="num-badge">3</span></td>
+          <td><strong>Teacher referral program</strong></td>
+          <td>Teacher refers another teacher to Abhyas — earns a bonus when the referred teacher completes their first class. Multiplies teacher network organically.</td>
+          <td><span class="pill pill-amber">Define bonus amount</span></td>
+        </tr>
+        <tr>
+          <td><span class="num-badge">4</span></td>
+          <td><strong>Facebook share → earn</strong></td>
+          <td>Teacher shares their Abhyas profile or class on Facebook → unlocks a bonus or badge. Drives organic social reach across Nepal teacher community.</td>
+          <td><span class="pill pill-blue">Idea — design needed</span></td>
+        </tr>
+        <tr>
+          <td><span class="num-badge">5</span></td>
+          <td><strong>"How a teacher earns on Abhyas" slide deck</strong></td>
+          <td>Full explainer: Rs. 80/class → Rs. 1,000 withdrawal → referral bonus → badges. Used in teacher recruitment, municipality onboarding, Facebook posts.</td>
+          <td><span class="pill pill-red">Prepare this week</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- GAMIFICATION -->
+    <div class="section-head"><h2 class="section-title">Gamification & profile</h2><div class="section-line"></div></div>
+    <table class="growth-table">
+      <thead><tr><th>#</th><th>Feature</th><th>Detail</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="num-badge">1</span></td>
+          <td><strong>Abhyas profile picture with template</strong></td>
+          <td>Custom profile picture frame/template for Abhyas teachers — "I teach on Abhyas" style. Shareable on Facebook/WhatsApp. Builds brand identity and social proof.</td>
+          <td><span class="pill pill-blue">Design needed — Rahul</span></td>
+        </tr>
+        <tr>
+          <td><span class="num-badge">2</span></td>
+          <td><strong>Achievement tags / badges</strong></td>
+          <td>"First class ✓", "10 classes ✓", "Sunday teacher", "HRDC champion", "Bajura pioneer" etc. Visible on teacher profile. Recognises effort publicly without monetary cost.</td>
+          <td><span class="pill pill-blue">Define badge system</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- PRODUCT / REVENUE IDEAS -->
+    <div class="section-head"><h2 class="section-title">Product & revenue model ideas</h2><div class="section-line"></div></div>
+    <table class="growth-table">
+      <thead><tr><th>#</th><th>Idea</th><th>Detail</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="num-badge">1</span></td>
+          <td><strong>Class-count based revenue model</strong></td>
+          <td>Revenue assumptions built on number of classes conducted — not just municipality subscription count. Municipality subscription accelerates class volume but the underlying metric is classes taught. Allows projecting revenue at any scale.</td>
+          <td><span class="pill pill-amber">Build assumptions model — Bimochan</span></td>
+        </tr>
+        <tr>
+          <td><span class="num-badge">2</span></td>
+          <td><strong>Abhyas origin story slide</strong></td>
+          <td>"From Durbar High School till now in Nepal education system." Timeline of Nepal education + where Abhyas fits. Used in municipality presentations, donor proposals, and team motivation.</td>
+          <td><span class="pill pill-amber">Prepare — Suraj</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ACTION TASKS -->
+    <div class="section-head"><h2 class="section-title">Action tasks</h2><div class="section-line"></div></div>
+    <div class="task-group">
+      <div class="task-group-header"><span>Immediate — this week</span></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Define teacher earning model — Rs. 80/class, Rs. 1,000 withdrawal · answer the 4 open questions</div><div class="task-note">Who funds it? What defines a completed class? eSewa/Khalti compliance? Abuse prevention mechanism?</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-red">This week</span><span class="task-due">Abi / Bimochan</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Prepare "How a teacher earns on Abhyas" — full slide deck</div><div class="task-note">Rs. 80/class → Rs. 1,000 threshold → referral → badges → Facebook share. Use to recruit Kiran Sir formally and share with all Gokarneshwor teachers.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-red">This week</span><span class="task-due">Suraj</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Formally enrol Kiran Sir as Abhyas champion — show him the Rs. 80/class model</div><div class="task-note">He is the only teacher currently teaching independently. Give him a concrete number. Make him the face of the teacher earning program.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-red">This week</span><span class="task-due">Suraj D.</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Prepare Abhyas origin story slide — Durbar High School → Nepal education → Abhyas today</div></div><div class="task-right"><span class="priority-p2">P2</span><span class="pill pill-amber">This week</span><span class="task-due">Suraj</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Build class-count revenue model — assumptions for all scenarios, not just municipality count</div></div><div class="task-right"><span class="priority-p2">P2</span><span class="pill pill-amber">This week</span><span class="task-due">Bimochan</span></div></div>
+    </div>
+    <div class="task-group">
+      <div class="task-group-header"><span>Product backlog — needs scope before build</span></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Design teacher wallet + Rs. 80/class tracking in Abhyas dashboard</div><div class="task-note">Teacher sees: classes taught, earnings accumulated, withdrawal button (activates at Rs. 1,000). Rahul to design in next Figma sprint.</div></div><div class="task-right"><span class="priority-p2">P2</span><span class="pill pill-blue">Figma scope</span><span class="task-due">Rahul</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Design Abhyas profile picture template + achievement badge system</div></div><div class="task-right"><span class="priority-p2">P2</span><span class="pill pill-blue">Figma scope</span><span class="task-due">Rahul</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Design Facebook share mechanic — share profile/class → earn bonus or badge</div></div><div class="task-right"><span class="priority-p3">P3</span><span class="pill pill-gray">Backlog</span><span class="task-due">Dev / Rahul</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Design teacher referral program — define bonus amount, rules, payout</div></div><div class="task-right"><span class="priority-p3">P3</span><span class="pill pill-gray">Backlog</span><span class="task-due">Abi</span></div></div>
+    </div>
+  </div>
+
 </div><!-- end main -->
 
 <script>
@@ -2464,6 +2627,7 @@ const pages = {
   policy:{title:'Policy & Compliance',crumb:'/ strategy / policy'},
   milestones:{title:'All Milestones',crumb:'/ strategy / milestones'},
   decisions:{title:'Decisions Log',crumb:'/ strategy / decisions'},
+  ideas:{title:'Strategic Ideas & Initiatives',crumb:'/ strategy / ideas'},
   visitreport:{title:'Field Visit — May 27, 2026',crumb:'/ field / may-27'},
   visitjun:{title:'Field Visits — Jun 1 & 3, 2026',crumb:'/ field / jun-1-3'},
   issues:{title:'Implementation Issues Log',crumb:'/ field / issues-log'},
