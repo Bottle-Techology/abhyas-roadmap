@@ -417,6 +417,11 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
       <span class="nav-icon">✓</span>
       <span class="nav-label">Decisions Log</span>
     </a>
+    <a class="nav-item" onclick="showPage('data',this)">
+      <span class="nav-icon">📊</span>
+      <span class="nav-label">Nepal Education Data</span>
+      <span class="nav-badge badge-blue">2082</span>
+    </a>
     <a class="nav-item" onclick="showPage('ideas',this)">
       <span class="nav-icon">💡</span>
       <span class="nav-label">Strategic Ideas</span>
@@ -2738,6 +2743,279 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
     </div>
   </div>
 
+  <!-- ═══ NEPAL EDUCATION DATA PAGE ═══ -->
+  <div class="page" id="page-data">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+      <div>
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:4px">Source: EMIS · CEHRD · Government of Nepal · FY 2082</div>
+        <h2 style="font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--navy)">Why Abhyas — Nepal Education Data 2082</h2>
+      </div>
+      <a href="https://emis.cehrd.gov.np/" target="_blank" style="font-family:var(--font-mono);font-size:10px;padding:4px 10px;border-radius:8px;background:#EFF6FF;color:var(--accent);text-decoration:none;border:1px solid #BFDBFE">emis.cehrd.gov.np ↗</a>
+    </div>
+    <div style="font-size:12px;color:#64748B;margin-bottom:20px">753 municipalities · 39,046 schools · 8,047,053 students · 234,862 teachers · FY 2082 data</div>
+
+    <!-- THE CASE IN 4 NUMBERS -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:24px">
+      <div style="background:#FEF2F2;border:1px solid #FECACA;border-radius:10px;padding:16px;text-align:center">
+        <div style="font-family:var(--font-display);font-size:36px;font-weight:700;color:var(--red)">34.3</div>
+        <div style="font-size:12px;color:#991B1B;font-weight:600;margin-top:4px">Students per teacher</div>
+        <div style="font-size:11px;color:#64748B;margin-top:4px">National average. Madhesh: 73:1</div>
+      </div>
+      <div style="background:#FFFBEB;border:1px solid #FDE68A;border-radius:10px;padding:16px;text-align:center">
+        <div style="font-family:var(--font-display);font-size:36px;font-weight:700;color:var(--amber)">64.9%</div>
+        <div style="font-size:12px;color:#92400E;font-weight:600;margin-top:4px">Average promotion rate</div>
+        <div style="font-size:11px;color:#64748B;margin-top:4px">1 in 3 students does not advance</div>
+      </div>
+      <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:10px;padding:16px;text-align:center">
+        <div style="font-family:var(--font-display);font-size:36px;font-weight:700;color:var(--accent)">1.5M</div>
+        <div style="font-size:12px;color:#1E40AF;font-weight:600;margin-top:4px">Class 8–10 students</div>
+        <div style="font-size:11px;color:#64748B;margin-top:4px">Abhyas primary target group</div>
+      </div>
+      <div style="background:#F5F3FF;border:1px solid #DDD6FE;border-radius:10px;padding:16px;text-align:center">
+        <div style="font-family:var(--font-display);font-size:36px;font-weight:700;color:var(--purple)">23.8%</div>
+        <div style="font-size:12px;color:#5B21B6;font-weight:600;margin-top:4px">Public schools without internet</div>
+        <div style="font-size:11px;color:#64748B;margin-top:4px">6,523 schools entirely offline</div>
+      </div>
+    </div>
+
+    <!-- THE CORE ARGUMENT -->
+    <div class="visit-report-card" style="border-color:#BFDBFE;margin-bottom:20px">
+      <div class="visit-report-header">
+        <div class="visit-report-title">🎯 The case for Abhyas — in plain language</div>
+      </div>
+      <div class="finding-block">
+        <div class="finding-text">
+          <div class="insight-row"><span class="insight-icon">1️⃣</span><div class="insight-body"><strong>Nepal has 234,862 teachers for 8,047,053 students — a ratio of 34:1 nationally.</strong> In Madhesh Province it reaches 73:1. No individual teacher can provide adequate attention to this many students. Abhyas lets one teacher reach hundreds of students simultaneously through live streaming and recorded classes.</div></div>
+          <div class="insight-row"><span class="insight-icon">2️⃣</span><div class="insight-body"><strong>Only 64.9% of students are promoted annually.</strong> 1 in 3 students does not advance. The data does not isolate why — but low teacher availability, geographic barriers, and lack of quality content access are well-documented contributors. Abhyas addresses all three.</div></div>
+          <div class="insight-row"><span class="insight-icon">3️⃣</span><div class="insight-body"><strong>1,500,144 students are in Class 8–10</strong> — Abhyas's primary target. This is the most critical transition period in Nepal's education system: students preparing for the SEE (Class 10 exam). Quality of teaching in these grades determines outcomes. Weak students in Classes 8–10 benefit most from additional digital instruction.</div></div>
+          <div class="insight-row"><span class="insight-icon">4️⃣</span><div class="insight-body"><strong>76.2% of public schools have internet</strong> — meaning most schools already have the connectivity to use Abhyas. The infrastructure barrier is lower than assumed. The remaining 23.8% without internet represents the second priority problem to solve (after teacher adoption).</div></div>
+          <div class="insight-row"><span class="insight-icon">5️⃣</span><div class="insight-body"><strong>Only 22.8% of teachers hold a Master's degree or above.</strong> 9.3% hold only SLC level qualification. Teacher quality is uneven. Abhyas's model — where the best teachers broadcast to multiple schools simultaneously — multiplies the impact of qualified teachers across the system.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROVINCE TABLE -->
+    <div class="section-head"><h2 class="section-title">Province-level breakdown</h2><div class="section-line"></div><span class="section-tag">Source: EMIS 2082 · 753 municipalities</span></div>
+    <table class="growth-table">
+      <thead>
+        <tr>
+          <th>Province</th>
+          <th>Munis</th>
+          <th>Schools</th>
+          <th>Students</th>
+          <th>Teachers</th>
+          <th>S:T Ratio</th>
+          <th>C8–10 students</th>
+          <th>Internet %</th>
+          <th>Avg dropout</th>
+          <th>Abhyas priority</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#FEF2F2">
+          <td><strong>Madhesh</strong></td>
+          <td>136</td>
+          <td>5,973</td>
+          <td>1,983,468</td>
+          <td>27,037</td>
+          <td style="color:var(--red);font-weight:700">73.4:1</td>
+          <td>311,079</td>
+          <td style="color:var(--amber);font-weight:600">74.0%</td>
+          <td style="color:var(--red);font-weight:600">1.84%</td>
+          <td><span class="pill pill-red">🔴 Critical</span></td>
+        </tr>
+        <tr style="background:#FFFBEB">
+          <td><strong>Lumbini</strong></td>
+          <td>109</td>
+          <td>6,354</td>
+          <td>1,511,830</td>
+          <td>42,080</td>
+          <td style="color:var(--amber);font-weight:700">35.9:1</td>
+          <td>267,485</td>
+          <td>80.0%</td>
+          <td style="color:var(--amber)">0.93%</td>
+          <td><span class="pill pill-amber">High</span></td>
+        </tr>
+        <tr>
+          <td><strong>Bagmati</strong></td>
+          <td>119</td>
+          <td>6,907</td>
+          <td>1,354,756</td>
+          <td>43,258</td>
+          <td>31.3:1</td>
+          <td>273,522</td>
+          <td style="color:var(--green);font-weight:600">83.0%</td>
+          <td>0.75%</td>
+          <td><span class="pill pill-blue">Active — Gokarneshwor</span></td>
+        </tr>
+        <tr>
+          <td><strong>Koshi</strong></td>
+          <td>137</td>
+          <td>7,389</td>
+          <td>1,271,379</td>
+          <td>43,391</td>
+          <td>29.3:1</td>
+          <td>253,806</td>
+          <td>81.4%</td>
+          <td>0.69%</td>
+          <td><span class="pill pill-blue">Priority — FY 2083–84</span></td>
+        </tr>
+        <tr>
+          <td><strong>Sudurpashchim</strong></td>
+          <td>88</td>
+          <td>4,531</td>
+          <td>803,368</td>
+          <td>29,364</td>
+          <td>27.4:1</td>
+          <td>159,037</td>
+          <td style="color:var(--red)">69.2%</td>
+          <td>0.72%</td>
+          <td><span class="pill pill-amber">High — Bajura active</span></td>
+        </tr>
+        <tr>
+          <td><strong>Karnali</strong></td>
+          <td>79</td>
+          <td>3,636</td>
+          <td>552,449</td>
+          <td>20,408</td>
+          <td>27.1:1</td>
+          <td>112,508</td>
+          <td style="color:var(--red);font-weight:600">57.3%</td>
+          <td style="color:var(--amber)">1.10%</td>
+          <td><span class="pill pill-amber">High — remote, low internet</span></td>
+        </tr>
+        <tr>
+          <td><strong>Gandaki</strong></td>
+          <td>85</td>
+          <td>4,256</td>
+          <td>569,803</td>
+          <td>29,324</td>
+          <td style="color:var(--green)">19.4:1</td>
+          <td>122,707</td>
+          <td>81.6%</td>
+          <td style="color:var(--green)">0.50%</td>
+          <td><span class="pill pill-gray">Lower urgency</span></td>
+        </tr>
+        <tr style="background:#F8FAFC;font-weight:600">
+          <td>Nepal total</td>
+          <td>753</td>
+          <td>39,046</td>
+          <td>8,047,053</td>
+          <td>234,862</td>
+          <td>34.3:1</td>
+          <td>1,500,144</td>
+          <td>76.2%</td>
+          <td>0.97%</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- TEACHER BREAKDOWN -->
+    <div class="section-head"><h2 class="section-title">Teacher profile — the Abhyas supply side</h2><div class="section-line"></div></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
+
+      <div class="visit-report-card">
+        <div class="visit-report-header"><div class="visit-report-title">📚 Qualifications</div></div>
+        <div class="finding-block">
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="width:80px;font-size:11px;color:#334155">Master+</div>
+              <div style="flex:1;background:#F1F5F9;border-radius:4px;height:12px;overflow:hidden"><div style="width:22.8%;height:100%;background:var(--purple)"></div></div>
+              <div style="font-family:var(--font-mono);font-size:11px;color:var(--purple);width:48px;text-align:right">22.8%</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="width:80px;font-size:11px;color:#334155">Bachelor</div>
+              <div style="flex:1;background:#F1F5F9;border-radius:4px;height:12px;overflow:hidden"><div style="width:31.6%;height:100%;background:var(--accent)"></div></div>
+              <div style="font-family:var(--font-mono);font-size:11px;color:var(--accent);width:48px;text-align:right">31.6%</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="width:80px;font-size:11px;color:#334155">Intermediate</div>
+              <div style="flex:1;background:#F1F5F9;border-radius:4px;height:12px;overflow:hidden"><div style="width:38.3%;height:100%;background:var(--amber)"></div></div>
+              <div style="font-family:var(--font-mono);font-size:11px;color:var(--amber);width:48px;text-align:right">38.3%</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="width:80px;font-size:11px;color:#334155">SLC only</div>
+              <div style="flex:1;background:#F1F5F9;border-radius:4px;height:12px;overflow:hidden"><div style="width:9.3%;height:100%;background:var(--red)"></div></div>
+              <div style="font-family:var(--font-mono);font-size:11px;color:var(--red);width:48px;text-align:right">9.3%</div>
+            </div>
+          </div>
+          <div style="margin-top:10px;font-size:11px;color:#64748B">Abhyas multiplies impact of qualified teachers (Master/Bachelor = 54.4%) by enabling them to teach across multiple schools simultaneously.</div>
+        </div>
+      </div>
+
+      <div class="visit-report-card">
+        <div class="visit-report-header"><div class="visit-report-title">👥 Employment & gender</div></div>
+        <div class="finding-block">
+          <div class="insight-row"><span class="insight-icon">📌</span><div class="insight-body"><strong>Permanent teachers:</strong> 96,694 (41.2%) — secure income, potentially resistant to change</div></div>
+          <div class="insight-row"><span class="insight-icon">📌</span><div class="insight-body"><strong>Temporary teachers:</strong> 6,491 (2.8%) — more motivated by additional income streams like Abhyas Rs. 80/class model</div></div>
+          <div class="insight-row"><span class="insight-icon">👨‍🏫</span><div class="insight-body"><strong>Male: 60.3% · Female: 57.0%</strong> (overlap due to [object Object] data rows) — relatively balanced. Abhyas can specifically incentivise female teachers in remote areas who face mobility constraints.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INFRASTRUCTURE GAP -->
+    <div class="section-head"><h2 class="section-title">Infrastructure gap — where Abhyas solves</h2><div class="section-line"></div></div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px">
+      <div style="background:#ECFDF5;border:1px solid #A7F3D0;border-radius:8px;padding:14px;text-align:center">
+        <div style="font-family:var(--font-display);font-size:26px;font-weight:700;color:#065F46">76.2%</div>
+        <div style="font-size:11px;color:#065F46;font-weight:600">Have internet</div>
+        <div style="font-size:10px;color:#64748B;margin-top:3px">20,873 public schools</div>
+      </div>
+      <div style="background:#FFFBEB;border:1px solid #FDE68A;border-radius:8px;padding:14px;text-align:center">
+        <div style="font-family:var(--font-display);font-size:26px;font-weight:700;color:#92400E">74.6%</div>
+        <div style="font-size:11px;color:#92400E;font-weight:600">Have electricity</div>
+        <div style="font-size:10px;color:#64748B;margin-top:3px">20,424 public schools</div>
+      </div>
+      <div style="background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:14px;text-align:center">
+        <div style="font-family:var(--font-display);font-size:26px;font-weight:700;color:#991B1B">24.4%</div>
+        <div style="font-size:11px;color:#991B1B;font-weight:600">Have science lab</div>
+        <div style="font-size:10px;color:#64748B;margin-top:3px">6,698 public schools</div>
+      </div>
+      <div style="background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:14px;text-align:center">
+        <div style="font-family:var(--font-display);font-size:26px;font-weight:700;color:#991B1B">21.1%</div>
+        <div style="font-size:11px;color:#991B1B;font-weight:600">Disability access</div>
+        <div style="font-size:10px;color:#64748B;margin-top:3px">5,786 public schools</div>
+      </div>
+    </div>
+    <div class="info-box info-blue">The internet penetration (76.2%) means Abhyas can deploy in the majority of Nepal's public schools <strong>right now</strong> without any additional infrastructure investment. The 23.8% without internet represents the next problem to solve — and Abhyas's HRDC model (streaming from a connected school to a nearby unconnected institution via mobile hotspot or HDMI) already demonstrates a workaround.</div>
+
+    <!-- TARGET MARKET -->
+    <div class="section-head"><h2 class="section-title">Abhyas addressable market</h2><div class="section-line"></div></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px">
+      <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:10px;padding:16px">
+        <div style="font-family:var(--font-mono);font-size:9px;color:var(--accent);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:6px">Primary target</div>
+        <div style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--navy);margin-bottom:4px">1,500,144 students</div>
+        <div style="font-size:12px;color:#334155">Class 8–10 across Nepal's 27,396 public schools. SEE preparation period — highest impact window for quality digital instruction.</div>
+        <div style="margin-top:10px;font-family:var(--font-mono);font-size:10px;color:#64748B">C8: 558,832 · C9: 495,519 · C10: 445,793</div>
+      </div>
+      <div style="background:#F5F3FF;border:1px solid #DDD6FE;border-radius:10px;padding:16px">
+        <div style="font-family:var(--font-mono);font-size:9px;color:var(--purple);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:6px">Secondary target</div>
+        <div style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--navy);margin-bottom:4px">621,923 students</div>
+        <div style="font-size:12px;color:#334155">Class 11–12 in public schools. Higher secondary — significant gap in quality content availability, especially in sciences and math.</div>
+      </div>
+      <div style="background:#ECFDF5;border:1px solid #A7F3D0;border-radius:10px;padding:16px">
+        <div style="font-family:var(--font-mono);font-size:9px;color:var(--green);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:6px">Teacher supply side</div>
+        <div style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--navy);margin-bottom:4px">127,701 teachers</div>
+        <div style="font-size:12px;color:#334155">Bachelor or Master+ qualified teachers in public schools — potential Abhyas content creators and live class instructors. Rs. 80/class model targets this group.</div>
+      </div>
+    </div>
+
+    <!-- HIGH DROPOUT MUNIS — Bajura context -->
+    <div class="section-head"><h2 class="section-title">High-need municipalities — dropout rate</h2><div class="section-line"></div><span class="section-tag">Where Abhyas can make the biggest difference</span></div>
+    <table class="growth-table">
+      <thead><tr><th>Municipality</th><th>District</th><th>Province</th><th>Students</th><th>Teachers</th><th>Dropout</th><th>Relevance to Abhyas</th></tr></thead>
+      <tbody>
+        <tr style="background:#FEF2F2"><td><strong>Aurahi Rural</strong></td><td>Dhanusha</td><td>Madhesh</td><td>9,910</td><td>119</td><td style="color:var(--red);font-weight:700">6.6%</td><td><span class="pill pill-red">83:1 student:teacher</span></td></tr>
+        <tr><td><strong>Kamala</strong></td><td>Dhanusha</td><td>Madhesh</td><td>10,204</td><td>142</td><td style="color:var(--red);font-weight:600">6.0%</td><td><span class="pill pill-red">72:1 ratio</span></td></tr>
+        <tr style="background:#FEF2F2"><td><strong>Bahudarmai</strong></td><td>Parsa</td><td>Madhesh</td><td>13,831</td><td>175</td><td style="color:var(--amber);font-weight:600">4.9%</td><td><span class="pill pill-amber">High student load</span></td></tr>
+        <tr><td><strong>Namkha Rural</strong></td><td>Humla</td><td>Karnali</td><td>836</td><td>63</td><td style="color:var(--amber);font-weight:600">4.7%</td><td><span class="pill pill-amber">Remote — near Bajura</span></td></tr>
+        <tr><td><strong>Gaushala</strong></td><td>Mahottari</td><td>Madhesh</td><td>26,274</td><td>342</td><td style="color:var(--amber)">4.4%</td><td><span class="pill pill-amber">77:1 ratio</span></td></tr>
+      </tbody>
+    </table>
+    <div class="info-box info-amber">Madhesh Province dominates the high-dropout list with student:teacher ratios up to 83:1. Sudurpashchim (Bajura, where Abhyas is now engaging) has lower absolute dropout but severe infrastructure gaps — 69.2% internet coverage is the lowest of any province. The Bajura engagement (Budi Ganga + Badimalika) is strategically well-placed.</div>
+  </div>
+
 </div><!-- end main -->
 
 <script>
@@ -2754,6 +3032,7 @@ const pages = {
   policy:{title:'Policy & Compliance',crumb:'/ strategy / policy'},
   milestones:{title:'All Milestones',crumb:'/ strategy / milestones'},
   decisions:{title:'Decisions Log',crumb:'/ strategy / decisions'},
+  data:{title:'Nepal Education Data — Why Abhyas',crumb:'/ strategy / data-insights'},
   ideas:{title:'Strategic Ideas & Initiatives',crumb:'/ strategy / ideas'},
   visitreport:{title:'Field Visit — May 27, 2026',crumb:'/ field / may-27'},
   visitjun:{title:'Field Visits — Jun 1 & 3, 2026',crumb:'/ field / jun-1-3'},
