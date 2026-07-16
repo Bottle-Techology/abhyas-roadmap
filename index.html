@@ -393,6 +393,11 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
       <span class="nav-label">Visit — Jun 1 &amp; 3</span>
       <span class="nav-badge badge-red">Bugs</span>
     </a>
+    <a class="nav-item" onclick="showPage('lmcreport',this)">
+      <span class="nav-icon">🏛</span>
+      <span class="nav-label">LMC Report</span>
+      <span class="nav-badge badge-green">Done</span>
+    </a>
     <a class="nav-item" onclick="showPage('issues',this)">
       <span class="nav-icon">🔎</span>
       <span class="nav-label">Implementation Issues</span>
@@ -496,8 +501,8 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
     <div class="overview-grid">
       <div class="stat-card blue" onclick="showPage('sales',document.querySelector('[onclick*=sales]'))">
         <div class="stat-label">Active deployments</div>
-        <div class="stat-val">4</div>
-        <div class="stat-sub">Gokarneshwor · Bagmati · HRDC + Khagendra →</div>
+        <div class="stat-val">5</div>
+        <div class="stat-sub">Gokarneshwor · LMC 4 schools · HRDC · Bagmati →</div>
       </div>
       <div class="stat-card green" onclick="showPage('scale',document.querySelector('[onclick*=scale]'))">
         <div class="stat-label">Scale target — FY 2083–84</div>
@@ -581,10 +586,10 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
       <div class="track-summary" onclick="showPage('sales',document.querySelector('[onclick*=sales]'))">
         <div class="track-summary-head"><span class="track-icon">🏛</span><span class="track-pct" id="ts-pct-sales">0% done</span></div>
         <div class="track-title">Sales & Municipality Pipeline</div>
-        <div class="track-sub-text">Budi Ganga meeting ✅ positive. Badimalika Jun 23–27. Bagmati quotation sent. LMC cold this FY. Godawari conditional on product features. HRDC free deployment active.</div>
+        <div class="track-sub-text">LMC contract signed Jun 24 ✅ — 4 schools onboarded. Budi Ganga + Badimalika Bajura active. Bagmati quotation sent. HRDC free deployment.</div>
         <div class="progress-bar"><div class="progress-fill pf-blue" id="ts-bar-sales" style="width:0%"></div></div>
         <div class="track-tags">
-          <span class="tag tag-red">LMC escalate</span><span class="tag tag-amber">Bagmati free MOU</span><span class="tag tag-amber">Godawari conditional</span><span class="tag tag-green">HRDC free ✓</span><span class="tag tag-gray">SchEMS on hold</span><span class="tag tag-gray">Budhanilkantha parked</span><span class="tag tag-blue">Budi Ganga Jun 17</span><span class="tag tag-blue">Badimalika</span>
+          <span class="tag tag-green">LMC signed ✓</span><span class="tag tag-amber">Bagmati free MOU</span><span class="tag tag-amber">Godawari conditional</span><span class="tag tag-green">HRDC free ✓</span><span class="tag tag-gray">SchEMS on hold</span><span class="tag tag-gray">Budhanilkantha parked</span><span class="tag tag-blue">Budi Ganga Jun 17</span><span class="tag tag-blue">Badimalika</span>
         </div>
         <div class="drill-hint">→ View tasks &amp; pipeline</div>
       </div>
@@ -659,11 +664,16 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
       <thead><tr><th>Municipality</th><th>Status</th><th>Handler</th><th>Update</th><th>Action needed</th></tr></thead>
       <tbody>
         <tr>
-          <td><strong>🏛 LMC</strong><br><span style="font-size:11px;color:#64748B">4 schools · Raju Sir</span></td>
-          <td><span class="pill pill-gray">Cold — not progressing</span></td>
+          <td><strong>✅ LMC (Lalitpur Metropolitan City)</strong><br><span style="font-size:11px;color:#64748B">4 schools · Contract signed Jun 24</span></td>
+          <td><span class="pill pill-green">Contract signed ✓ · Onboarding done</span></td>
           <td>Raju Sir (LMC Officer)</td>
-          <td style="font-size:12px;color:#334155">Suraj D. visited Jun 15. Officer said <strong>"aile lai paisa xaina, kaam vayepaxi call garxu"</strong> — no budget, told us not to come. Free demo offer not accepted.</td>
-          <td><span style="font-size:12px;color:#475569;font-weight:500">Parked this FY. Re-approach FY 2083–84 with budget.</span></td>
+          <td style="font-size:12px;color:#334155"><strong>Contract signed Jun 24, 2026.</strong> 4 schools onboarded:<br>
+          1. Adarsha Kanya — 13 teachers (Jun 25) + 26 students Class 9–10 (Jun 29)<br>
+          2. Shree Minnath — 4 teachers + 16 students (Jun 30)<br>
+          3. Shramik Bal Bigyan — 12 teachers + 25 students Class 8<br>
+          4. Adarsha Saula Yuwak — 36 students Class 10 only (no teachers — no time given)<br>
+          <strong>Issue:</strong> 2 other schools required municipality letter; municipality refused to provide it.</td>
+          <td><span style="font-size:12px;color:#065F46;font-weight:500">✅ Active. Follow up on teacher adoption at Adarsha Saula Yuwak. Resolve municipality letter issue.</span></td>
         </tr>
         <tr>
           <td><strong>🏛 Godawari</strong><br><span style="font-size:11px;color:#64748B">Raju Sir</span></td>
@@ -3016,6 +3026,148 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
     <div class="info-box info-amber">Madhesh Province dominates the high-dropout list with student:teacher ratios up to 83:1. Sudurpashchim (Bajura, where Abhyas is now engaging) has lower absolute dropout but severe infrastructure gaps — 69.2% internet coverage is the lowest of any province. The Bajura engagement (Budi Ganga + Badimalika) is strategically well-placed.</div>
   </div>
 
+  <!-- ═══ LMC FIELD REPORT PAGE ═══ -->
+  <div class="page" id="page-lmcreport">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+      <div>
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:4px">Internal Report · 2083 Ashadh 05</div>
+        <h2 style="font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--navy)">LMC Field Report — Lalitpur Metropolitan City</h2>
+      </div>
+      <span class="visit-date-chip" style="font-size:11px;padding:5px 12px">Jun 24–30, 2026</span>
+    </div>
+
+    <div class="info-box info-green"><strong>Contract signed Jun 24, 2026.</strong> Abhyas x Lalitpur Metropolitan City (LMC). 4 community schools onboarded across the municipality. Report submitted to: Lalitpur Mahanagarpalikaको Nagarkaryapalika, Pulchok, Lalitpur.</div>
+
+    <!-- SUMMARY STATS -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px">
+      <div style="background:#ECFDF5;border:1px solid #A7F3D0;border-radius:10px;padding:14px;text-align:center">
+        <div style="font-family:var(--font-display);font-size:32px;font-weight:700;color:#065F46">4</div>
+        <div style="font-size:11px;color:#065F46;font-weight:600">Schools onboarded</div>
+      </div>
+      <div style="background:#ECFDF5;border:1px solid #A7F3D0;border-radius:10px;padding:14px;text-align:center">
+        <div style="font-family:var(--font-display);font-size:32px;font-weight:700;color:#065F46">42</div>
+        <div style="font-size:11px;color:#065F46;font-weight:600">Teachers onboarded</div>
+        <div style="font-size:10px;color:#64748B;margin-top:2px">13 + 4 + 12 + 13 (teachers from 4 schools)</div>
+      </div>
+      <div style="background:#ECFDF5;border:1px solid #A7F3D0;border-radius:10px;padding:14px;text-align:center">
+        <div style="font-family:var(--font-display);font-size:32px;font-weight:700;color:#065F46">103</div>
+        <div style="font-size:11px;color:#065F46;font-weight:600">Students onboarded</div>
+        <div style="font-size:10px;color:#64748B;margin-top:2px">26 + 16 + 25 + 36 students</div>
+      </div>
+      <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:10px;padding:14px;text-align:center">
+        <div style="font-family:var(--font-display);font-size:32px;font-weight:700;color:#1E40AF">Jun 24</div>
+        <div style="font-size:11px;color:#1E40AF;font-weight:600">Contract signed</div>
+        <div style="font-size:10px;color:#64748B;margin-top:2px">2083 Jestha 3 (Nepali date)</div>
+      </div>
+    </div>
+
+    <!-- SCHOOL ONBOARDING TABLE -->
+    <div class="section-head"><h2 class="section-title">School onboarding details</h2><div class="section-line"></div></div>
+    <table class="growth-table">
+      <thead><tr><th>#</th><th>School</th><th>Date</th><th>Teachers</th><th>Students</th><th>Grade</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr style="background:#ECFDF5">
+          <td><span class="num-badge">1</span></td>
+          <td><strong>Adarsha Kanya Secondary School</strong></td>
+          <td><span style="font-family:var(--font-mono);font-size:11px">Jun 25 (teachers)<br>Jun 29 (students)</span></td>
+          <td style="font-family:var(--font-display);font-size:18px;font-weight:700;color:#065F46">13</td>
+          <td style="font-family:var(--font-display);font-size:18px;font-weight:700;color:#065F46">26</td>
+          <td>Class 9–10</td>
+          <td><span class="pill pill-green">✅ Done</span></td>
+        </tr>
+        <tr style="background:#ECFDF5">
+          <td><span class="num-badge">2</span></td>
+          <td><strong>Shree Minnath Adarsha Shiksha Sadan</strong></td>
+          <td><span style="font-family:var(--font-mono);font-size:11px">Jun 30</span></td>
+          <td style="font-family:var(--font-display);font-size:18px;font-weight:700;color:#065F46">4</td>
+          <td style="font-family:var(--font-display);font-size:18px;font-weight:700;color:#065F46">16</td>
+          <td>—</td>
+          <td><span class="pill pill-green">✅ Done</span></td>
+        </tr>
+        <tr style="background:#ECFDF5">
+          <td><span class="num-badge">3</span></td>
+          <td><strong>Shramik Bal Bigyan Aadharabhut School</strong></td>
+          <td><span style="font-family:var(--font-mono);font-size:11px">Jun (Ashadh 02)</span></td>
+          <td style="font-family:var(--font-display);font-size:18px;font-weight:700;color:#065F46">12</td>
+          <td style="font-family:var(--font-display);font-size:18px;font-weight:700;color:#065F46">25</td>
+          <td>Class 8</td>
+          <td><span class="pill pill-green">✅ Done</span></td>
+        </tr>
+        <tr style="background:#FFFBEB">
+          <td><span class="num-badge">4</span></td>
+          <td><strong>Adarsha Saula Yuwak Secondary School</strong></td>
+          <td><span style="font-family:var(--font-mono);font-size:11px">Jun (Ashadh 28)</span></td>
+          <td style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--red)">0</td>
+          <td style="font-family:var(--font-display);font-size:18px;font-weight:700;color:#065F46">36</td>
+          <td>Class 10</td>
+          <td><span class="pill pill-amber">⚠ Students only — no teachers</span></td>
+        </tr>
+        <tr style="background:#F8FAFC;font-weight:600">
+          <td>—</td>
+          <td>Total</td>
+          <td>—</td>
+          <td style="font-family:var(--font-display);font-size:20px;font-weight:700;color:#065F46">29</td>
+          <td style="font-family:var(--font-display);font-size:20px;font-weight:700;color:#065F46">103</td>
+          <td>—</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ISSUES ENCOUNTERED -->
+    <div class="section-head"><h2 class="section-title">Issues encountered</h2><div class="section-line"></div></div>
+
+    <div class="visit-report-card" style="border-color:#FECACA">
+      <div class="visit-report-header">
+        <div class="visit-report-title">⚠️ Challenges during onboarding</div>
+        <span class="risk-chip rc-amber">3 issues</span>
+      </div>
+      <div class="finding-block">
+        <div class="finding-text">
+          <div class="insight-row"><span class="insight-icon">🔴</span><div class="insight-body"><strong>Municipality letter dispute:</strong> 2 schools required a formal letter from the municipality before allowing onboarding. When Abhyas approached LMC for the letter, municipality said it was not needed. Schools refused to proceed without it. <strong>These 2 schools could not be onboarded.</strong> Needs resolution — either LMC provides the letter or schools accept the signed MOU as sufficient authority.</div></div>
+          <div class="insight-row"><span class="insight-icon">🟠</span><div class="insight-body"><strong>Adarsha Saula Yuwak — teachers did not participate:</strong> School did not provide time for teacher onboarding. 36 Class 10 students were onboarded but no teachers. Without teacher buy-in, student onboarding alone has limited value. Follow-up required.</div></div>
+          <div class="insight-row"><span class="insight-icon">🟡</span><div class="insight-body"><strong>Infrastructure gaps:</strong> Insufficient smart boards and high-speed internet affected programme delivery at some schools. Same I2/I5 issues documented across Gokarneshwor also present in LMC.</div></div>
+          <div class="insight-row"><span class="insight-icon">🟡</span><div class="insight-body"><strong>Teacher seriousness:</strong> Some teachers did not take the training seriously, affecting training effectiveness and continuity. Same H4/H9 pattern observed in Gokarneshwor.</div></div>
+          <div class="insight-row"><span class="insight-icon">🟡</span><div class="insight-body"><strong>Time table constraints:</strong> Schools had difficulty accommodating additional Abhyas sessions within existing timetables. Same O4 constraint (government school hour limits) as Gokarneshwor.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RECOMMENDATIONS FROM REPORT -->
+    <div class="section-head"><h2 class="section-title">Recommendations — from formal report</h2><div class="section-line"></div></div>
+    <table class="growth-table">
+      <thead><tr><th>Party</th><th>Recommendation</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>LMC (Municipality)</strong></td>
+          <td>Budget allocation for smart boards and stable internet at all 4 schools. Include digital education programme in annual education plan and policy for long-term continuity.</td>
+        </tr>
+        <tr>
+          <td><strong>School Management Committee</strong></td>
+          <td>Increase awareness of programme importance. School administration must monitor and ensure teacher participation. Schedule dedicated Abhyas time in regular timetable — treat as part of the curriculum.</td>
+        </tr>
+        <tr>
+          <td><strong>Abhyas</strong></td>
+          <td>Regular refresher training at intervals. Field monitoring and feedback collection. Update training materials based on feedback. Continue facilitation for all 4 schools throughout this academic session.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- NEXT ACTIONS -->
+    <div class="section-head"><h2 class="section-title">Next actions — LMC</h2><div class="section-line"></div></div>
+    <div class="task-group">
+      <div class="task-group-header"><span>Open items</span></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Resolve municipality letter issue — 2 schools waiting</div><div class="task-note">Escalate to Raju Sir: either LMC provides the letter OR communicates officially to schools that the MOU is sufficient. These 2 schools cannot be onboarded until this is resolved.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-red">This week</span><span class="task-due">Abi / Suraj</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Adarsha Saula Yuwak — follow up for teacher onboarding</div><div class="task-note">36 students onboarded but zero teachers. Without teachers running classes, student onboarding is wasted. Get a committed time slot from the principal.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-red">This week</span><span class="task-due">Suraj D.</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Schedule refresher training for all 4 LMC schools</div><div class="task-note">Per the formal report recommendation — regular refresher sessions to consolidate adoption. Coordinate with school management committees.</div></div><div class="task-right"><span class="priority-p2">P2</span><span class="pill pill-amber">Next 2 weeks</span><span class="task-due">Suraj D.</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Submit formal report to LMC — Nagarkaryapalika office, Pulchok</div><div class="task-note">Report prepared and ready. Formal submission to LMC establishes accountability and positions Abhyas for next FY budget conversation.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-blue">Done / Confirm</span><span class="task-due">Abi</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Flag internet + smart board gaps to LMC — request budget support</div><div class="task-note">Per recommendation: LMC should allocate budget for infrastructure. Use EMIS data showing internet penetration gap as evidence.</div></div><div class="task-right"><span class="priority-p2">P2</span><span class="pill pill-amber">With next LMC meeting</span><span class="task-due">Abi</span></div></div>
+    </div>
+
+    <!-- PPP MODEL NOTE -->
+    <div class="info-box info-blue"><strong>Strategic significance:</strong> The LMC engagement establishes a <strong>Public-Private Partnership (PPP) model</strong> for digital education — the report explicitly frames it this way. This is the language municipalities, government, and donor agencies (GIZ, UNESCO) respond to. The LMC report + photos is now a documented proof case for this PPP model that can be used in all future municipality pitches and grant proposals.</div>
+  </div>
+
 </div><!-- end main -->
 
 <script>
@@ -3036,6 +3188,7 @@ const pages = {
   ideas:{title:'Strategic Ideas & Initiatives',crumb:'/ strategy / ideas'},
   visitreport:{title:'Field Visit — May 27, 2026',crumb:'/ field / may-27'},
   visitjun:{title:'Field Visits — Jun 1 & 3, 2026',crumb:'/ field / jun-1-3'},
+  lmcreport:{title:'LMC Field Report — Lalitpur',crumb:'/ field / lmc-report'},
   issues:{title:'Implementation Issues Log',crumb:'/ field / issues-log'},
   schems:{title:'SchEMS MOU',crumb:'/ sales / schems-mou'},
   marketing:{title:'Marketing & YouTube',crumb:'/ growth / marketing'},
