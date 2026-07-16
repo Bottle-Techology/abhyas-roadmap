@@ -401,7 +401,7 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
     <a class="nav-item" onclick="showPage('issues',this)">
       <span class="nav-icon">🔎</span>
       <span class="nav-label">Implementation Issues</span>
-      <span class="nav-badge badge-red">27</span>
+      <span class="nav-badge badge-red">28</span>
     </a>
     <div class="nav-section">Strategy</div>
     <a class="nav-item" onclick="showPage('scale',this)">
@@ -2123,7 +2123,7 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
         <div style="font-family:var(--font-mono);font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:4px">Product Manager · Gokarneshwor Municipality</div>
         <h2 style="font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--navy)">Implementation Issues Log</h2>
       </div>
-      <span class="visit-date-chip" style="font-size:11px;padding:5px 12px">Jun 18, 2026 · 27 issues tracked</span>
+      <span class="visit-date-chip" style="font-size:11px;padding:5px 12px">Jun 18, 2026 · 28 issues tracked</span>
     </div>
 
     <div class="info-box info-blue">All issues documented from Abhyas deployment across Gokarneshwor Municipality schools — Khagendra, Chamunda, Tarabhir, Okhreni. Categorised by type: Technical (platform bugs), Infrastructure (school environment), Human (people & behaviour), Organisational (inter-school dynamics). Each has an owner, severity, and recommended action.</div>
@@ -2389,6 +2389,21 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
           <td>Abhyas team</td>
           <td style="font-size:12px;color:#334155">Teacher training on remote pedagogy: use screen sharing, digital materials, avoid physical book references. Part of AI for Teachers session.</td>
         </tr>
+        <tr style="background:#FEF2F2">
+          <td style="font-weight:700;color:var(--red)">H11</td>
+          <td><strong>Teacher onboarding timing — impossible to gather teachers</strong><br>
+          <span style="font-size:11px;color:#64748B">Teachers won't sit for onboarding during break time or off-hours. During school hours they are teaching and unavailable. Principal cannot influence or compel attendance. This is systemic across both Gokarneshwor and LMC — not school-specific.</span></td>
+          <td><span class="pill pill-red">All schools</span></td>
+          <td><span class="pill pill-red">Critical</span></td>
+          <td>Suraj D. / Abi</td>
+          <td style="font-size:12px;color:#991B1B">
+            <strong>Options to explore:</strong><br>
+            1. <strong>Embed onboarding in school calendar</strong> — request municipality officer to formally schedule 1 Abhyas session per term as part of the school's professional development calendar. Not optional.<br>
+            2. <strong>Individual async onboarding</strong> — WhatsApp-based self-paced setup guide. Teacher onboards themselves on their own phone, on their own time. No group session needed.<br>
+            3. <strong>Incentive-first approach</strong> — show teacher the Rs. 80/class model before asking them to sit for training. Motivation precedes adoption.<br>
+            4. <strong>Kiran Sir model</strong> — train one champion per school, have them train peers informally.
+          </td>
+        </tr>
         <tr>
           <td style="font-weight:700">H4</td>
           <td><strong>Teachers lack confidence with digital tools — dependency on Abhyas team</strong><br><span style="font-size:11px;color:#64748B">Teachers cannot troubleshoot independently; every issue requires Abhyas team involvement</span></td>
@@ -2452,9 +2467,9 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
     <div class="section-head"><h2 class="section-title">Issues summary</h2><div class="section-line"></div></div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px">
       <div style="background:#FEF2F2;border:1px solid #FECACA;border-radius:8px;padding:14px;text-align:center">
-        <div style="font-family:var(--font-display);font-size:28px;font-weight:700;color:var(--red)">10</div>
+        <div style="font-family:var(--font-display);font-size:28px;font-weight:700;color:var(--red)">11</div>
         <div style="font-size:11px;color:#991B1B;font-weight:500">Critical</div>
-        <div style="font-size:10px;color:#64748B;margin-top:3px">T1 T2 I2 I3 I5 H1 H6 H9 O1 O4</div>
+        <div style="font-size:10px;color:#64748B;margin-top:3px">T1 T2 I2 I3 I5 H1 H6 H9 H11 O1 O4</div>
       </div>
       <div style="background:#FFFBEB;border:1px solid #FDE68A;border-radius:8px;padding:14px;text-align:center">
         <div style="font-family:var(--font-display);font-size:28px;font-weight:700;color:var(--amber)">10</div>
@@ -2473,7 +2488,7 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
       </div>
     </div>
 
-    <div class="info-box info-red"><strong>PM note — Jun 18:</strong> The Jun 18 visit revealed that <strong>teacher adoption is the number one risk</strong> across all schools — not product, not infrastructure. Only Kiran Dhital Sir has used Abhyas independently. Every class has been run with Abhyas team on-site. This is not scalable. Three compounding issues: <strong>H6 (groupism — teachers won't learn from peers)</strong>, <strong>H7 (principal not championing)</strong>, and <strong>H9 (no independent adoption)</strong>. The platform is currently a demo tool, not a teaching tool. Until a teacher runs a class without the Abhyas team present, the product has not been adopted. The infrastructure issues (T10–T15) are real but secondary — even with perfect connectivity, if teachers don't use the platform independently the deployment fails. <strong>O4 (government teacher constraints)</strong> and <strong>O1 (inter-school competition)</strong> mean municipality-level directive + financial incentives are the only sustainable levers.</div>
+    <div class="info-box info-red"><strong>PM note — Jun 18:</strong> The Jun 18 visit revealed that <strong>teacher adoption is the number one risk</strong> across all schools — not product, not infrastructure. Only Kiran Dhital Sir has used Abhyas independently. Every class has been run with Abhyas team on-site. This is not scalable. Three compounding issues: <strong>H6 (groupism — teachers won't learn from peers)</strong>, <strong>H7 (principal not championing)</strong>, and <strong>H9 (no independent adoption)</strong>. The platform is currently a demo tool, not a teaching tool. Until a teacher runs a class without the Abhyas team present, the product has not been adopted. The infrastructure issues (T10–T15) are real but secondary — even with perfect connectivity, if teachers don't use the platform independently the deployment fails. <strong>O4 (government teacher constraints)</strong>, <strong>O1 (inter-school competition)</strong>, and <strong>H11 (onboarding timing)</strong> compound each other — principal cannot compel, teachers won't give break/off-hours, school hours are fully committed. The only viable path is: (1) municipality formally scheduling Abhyas as professional development, (2) async self-paced onboarding so teachers never need to gather as a group, and (3) leading with the Rs. 80/class incentive before asking for any time commitment.</div>
   </div>
 
   <!-- ═══ STRATEGIC IDEAS PAGE ═══ -->
