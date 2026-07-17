@@ -357,6 +357,11 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
       <span class="nav-label">Dashboard</span>
       <span class="nav-badge badge-amber">NOW</span>
     </a>
+    <a class="nav-item" onclick="showPage('meetings',this)">
+      <span class="nav-icon">🗓</span>
+      <span class="nav-label">Meeting Minutes</span>
+      <span class="nav-badge badge-blue">THU</span>
+    </a>
     <div class="nav-section">Tracks</div>
     <a class="nav-item" onclick="showPage('sales',this)">
       <span class="nav-icon">🏛</span>
@@ -493,7 +498,7 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
         <div class="fy-icon">⏱</div>
         <div>
           <div class="fy-title">FY 2082–83 closes July 16, 2026 — 8 days to FY end</div>
-          <div class="fy-desc">Jul 8, 2026 (Ashad 24, 2083) · Week Jun 15–19 · LAN cable installed at Khagendra · Classes + HRDC streaming start Jun 18 · 2nd Sunday class done Jun 14 · Bagmati MOU resent · LMC call received (no progress yet) · ERDCN contract revision needed (10% commission) · Budi Ganga meeting Jun 17 · Budhanilkantha parked</div>
+          <div class="fy-desc">Jul 16, 2026 (Shrawan 1, 2083 — new FY starts) · 🎯 This week Jul 18–25: 20 classes (10 Adarsha Kanya + 10 Khagendra) streamed to multiple schools · 🆕 15 municipality introductory letters ready to deliver (Ktm 9 · Lalitpur 3 · Bhaktapur 3) · Teacher incentive set at NPR 500/class (interim) · LMC teacher trial + student survey planned · ERDCN contract revision pending</div>
         </div>
       </div>
       <div class="fy-countdown">
@@ -591,10 +596,10 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
       <div class="track-summary" onclick="showPage('sales',document.querySelector('[onclick*=sales]'))">
         <div class="track-summary-head"><span class="track-icon">🏛</span><span class="track-pct" id="ts-pct-sales">0% done</span></div>
         <div class="track-title">Sales & Municipality Pipeline</div>
-        <div class="track-sub-text">LMC contract signed Jun 24 ✅ — 4 schools onboarded. Budi Ganga + Badimalika Bajura active. Bagmati quotation sent. HRDC free deployment.</div>
+        <div class="track-sub-text">🆕 15 Valley municipality introductory letters ready to deliver (FY 2083–84 kickoff). LMC signed ✅ — 4 schools. Budi Ganga + Badimalika Bajura active. Bagmati quotation sent. HRDC free deployment.</div>
         <div class="progress-bar"><div class="progress-fill pf-blue" id="ts-bar-sales" style="width:0%"></div></div>
         <div class="track-tags">
-          <span class="tag tag-green">LMC signed ✓</span><span class="tag tag-amber">Bagmati free MOU</span><span class="tag tag-amber">Godawari conditional</span><span class="tag tag-green">HRDC free ✓</span><span class="tag tag-gray">SchEMS on hold</span><span class="tag tag-gray">Budhanilkantha parked</span><span class="tag tag-blue">Budi Ganga Jun 17</span><span class="tag tag-blue">Badimalika</span>
+          <span class="tag tag-green">🆕 15 Valley letters ready</span><span class="tag tag-green">LMC signed ✓</span><span class="tag tag-amber">Bagmati free MOU</span><span class="tag tag-amber">Godawari conditional</span><span class="tag tag-green">HRDC free ✓</span><span class="tag tag-gray">SchEMS on hold</span><span class="tag tag-blue">Budi Ganga demo</span><span class="tag tag-blue">Badimalika</span>
         </div>
         <div class="drill-hint">→ View tasks &amp; pipeline</div>
       </div>
@@ -659,10 +664,62 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
 
   </div><!-- end overview -->
 
+  <!-- ═══════════════════════════════════ MEETING MINUTES PAGE ═══ -->
+  <div class="page" id="page-meetings">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+      <div>
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:4px">Weekly Team Meeting · Every Thursday, 3:00 PM</div>
+        <h2 style="font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--navy)">Meeting Minutes &amp; Decisions</h2>
+      </div>
+      <span class="visit-date-chip" style="background:#DBEAFE;color:#1E40AF;font-size:11px;padding:5px 12px">🗓 Thu 3:00 PM weekly</span>
+    </div>
+
+    <div class="info-box info-blue">Standing cadence: the team meets <strong>every Thursday at 3:00 PM</strong>. Minutes and decisions from each meeting are logged here, newest first. Decisions that change plans also flow into the relevant track pages and the Decisions Log.</div>
+
+    <!-- ─── MEETING: Jul 16, 2026 ─── -->
+    <div class="section-head"><h2 class="section-title">Jul 16, 2026 — Shrawan 1, 2083</h2><div class="section-line"></div><span class="section-tag">Week 1 · FY 2083–84 kickoff</span></div>
+
+    <div class="visit-report-card" style="border-color:#BFDBFE">
+      <div class="visit-report-header">
+        <div class="visit-report-title">📋 Decisions made today</div>
+        <span class="visit-date-chip" style="background:#DBEAFE;color:#1E40AF">10 items</span>
+      </div>
+      <div class="finding-block">
+        <div class="finding-text">
+          <div class="insight-row"><span class="insight-icon">🗓</span><div class="insight-body"><strong>Weekly meeting cadence set</strong> — team meets every Thursday, 3:00 PM. Minutes + decisions logged in this tab going forward.</div></div>
+          <div class="insight-row"><span class="insight-icon">✉️</span><div class="insight-body"><strong>Valley outreach letters ready</strong> — 15 municipality introductory letters prepared and ready to deliver (Kathmandu 9 · Lalitpur 3 · Bhaktapur 3). Dedupe the two Tarakeshwar letters; route via warm contacts where they exist.</div></div>
+          <div class="insight-row"><span class="insight-icon">🎯</span><div class="insight-body"><strong>Weekly delivery target Jul 18–25:</strong> 20 classes — 10 from Adarsha Kanya + 10 from Khagendra, streamed live to multiple schools. Log delivered count, reach, and attendance.</div></div>
+          <div class="insight-row"><span class="insight-icon">💰</span><div class="insight-body"><strong>Teacher incentive (interim):</strong> NPR 500 per class. Minimum <strong>15 classes/month</strong> per teacher to qualify. <strong>Open:</strong> define what counts as a "payable class" before payout.</div></div>
+          <div class="insight-row"><span class="insight-icon">📆</span><div class="insight-body"><strong>Class cadence:</strong> at least 1 class daily per school. <strong>Coverage target:</strong> 4 schools per municipality.</div></div>
+          <div class="insight-row"><span class="insight-icon">🔥</span><div class="insight-body"><strong>Chamunda:</strong> run a FOMO play — use visible network momentum (Kiran Sir's 4 classes/day, LMC live, Okhreni, HRDC) to pull Chamunda into activating. Keep it aspirational, paired with hands-on support.</div></div>
+          <div class="insight-row"><span class="insight-icon">🍱</span><div class="insight-body"><strong>LMC teacher trial:</strong> hands-on session across the 4 LMC schools for ~20 teachers, with a lunch pack + light incentives. Fix date/time with each principal. Incentive form + budget: Bimochan.</div></div>
+          <div class="insight-row"><span class="insight-icon">📊</span><div class="insight-body"><strong>Student survey:</strong> pay NPR 500 to collect a student survey diagnosing why students don't join remote/Sunday classes (device, interest, timing, parent availability, awareness) — evidence before the fix.</div></div>
+          <div class="insight-row"><span class="insight-icon">🎬</span><div class="insight-body"><strong>Gauthali CSR updated:</strong> ~80 participants (70 students Class 7–10 + 5 teachers + 5 Abhyas), proposed Shrawan 8 (Fri) 2 PM. Apple Entertainment = ticket support; QFX = hall &amp; show-time.</div></div>
+          <div class="insight-row"><span class="insight-icon">🏫</span><div class="insight-body"><strong>Field status noted:</strong> 16 Gokarneshwor accounts created; Khagendra/Chamunda/Okhreni/Tarabhir onboarded; Kiran Sir now runs 4 classes/day. Recurring blocker across Khagendra + LMC: <strong>student device access</strong> (no device; parents' phones unavailable during class hours).</div></div>
+        </div>
+      </div>
+      <div class="finding-block">
+        <div class="finding-label"><span class="risk-chip rc-red">Open / to decide</span></div>
+        <div class="finding-text">
+          <div class="insight-row"><span class="insight-icon">❓</span><div class="insight-body"><strong>Payable-class criteria</strong> — must be defined before the incentive goes live (duration, min attendance, live vs recorded, scope, per-day cap).</div></div>
+          <div class="insight-row"><span class="insight-icon">❓</span><div class="insight-body"><strong>LMC trial incentive form + budget</strong> — with Bimochan.</div></div>
+          <div class="insight-row"><span class="insight-icon">❓</span><div class="insight-body"><strong>Tarakeshwar duplicate letter</strong> — confirm which of the two to send.</div></div>
+        </div>
+      </div>
+    </div>
+    <div style="font-size:11px;color:var(--text3);font-family:var(--font-mono);margin-top:4px">Attendees: [add names] · Next meeting: Thu Jul 23, 3:00 PM</div>
+
+  </div><!-- end meetings -->
+
   <!-- ═══════════════════════════════════ SALES PAGE ═══ -->
   <div class="page" id="page-sales">
     <div class="section-head"><h2 class="section-title">Sales & Municipality Pipeline</h2><div class="section-line"></div><span class="section-tag">FY 2082–83 · ~4 schools avg per municipality</span></div>
     <div class="info-box info-amber"><strong>Pipeline status update — Jun 2, 2026:</strong> Jugal dropped (no budget, not interested in free deployment or MOU). LMC + Godawari + Mahalaxmi handled by Raju Sir (LMC Officer) — calls not received, needs escalation. Bagmati visited — ready to implement, no FY budget. Free deployment MOU to sign. HRDC visited Jun 2 — ready for deployment with Khagendra. New: HRDC (Hospital &amp; Rehabilitation Center for Disabled Children (HRDC)) in collaboration with Khagendra — potential free deployment or ADBL CSR fund. Budhanilkantha to be escalated via Abi directly (Raghav Sir cannot influence at this level).</div>
+    <div class="info-box info-green"><strong>🆕 FY 2083–84 Valley outreach batch — Shrawan 1, 2083 (Jul 16, 2026):</strong> Introductory / cooperation-request letters (सहकार्यको अनुरोध पत्र) prepared and <strong>ready to deliver</strong> to <strong>15 municipalities</strong> across the Kathmandu Valley — opening move of the new fiscal year toward the sales target. <br><br>
+    <strong>Kathmandu (9):</strong> Kathmandu Metropolitan City · Kirtipur · Tarakeshwar · Budhanilkantha · Kageshwari Manohara · Shankharapur · Nagarjun · Chandragiri · Dakshinkali<br>
+    <strong>Lalitpur (3):</strong> Bagmati Rural Municipality · Konjyosom Rural Municipality · Mahalaxmi<br>
+    <strong>Bhaktapur (3):</strong> Bhaktapur · Madhyapur Thimi · Suryabinayak<br><br>
+    <em>Note: two Tarakeshwar letters exist in the batch (addresses नगरकार्यपालिका and मैजुहिटी) — confirm which to send / dedupe. Follow field principle: warm intro before documents — where a personal connection exists (e.g. Budhanilkantha via Khagendra), route the letter through that contact rather than cold-delivering.</em></div>
     <!-- MUNICIPALITY PIPELINE STATUS TABLE -->
     <div class="section-head"><h2 class="section-title">Municipality pipeline — current status</h2><div class="section-line"></div><span class="section-tag">Updated Jun 2, 2026</span></div>
     <table class="growth-table">
@@ -678,7 +735,7 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
           3. Shramik Bal Bigyan — 12 teachers + 25 students Class 8<br>
           4. Adarsha Saula Yuwak — 36 students Class 10 only (no teachers — no time given)<br>
           <strong>Issue:</strong> 2 other schools required municipality letter; municipality refused to provide it.</td>
-          <td><span style="font-size:12px;color:#065F46;font-weight:500">✅ Active. Follow up on teacher adoption at Adarsha Saula Yuwak. Resolve municipality letter issue.</span></td>
+          <td><span style="font-size:12px;color:#065F46;font-weight:500">✅ Active. Teachers now practising how to teach via Abhyas. <span style="color:#991B1B">Blockers: some students can't sign up, and some have no device — same access gap as Khagendra.</span> Follow up on Adarsha Saula Yuwak teacher adoption + resolve municipality-letter issue.</span></td>
         </tr>
         <tr>
           <td><strong>🏛 Godawari</strong><br><span style="font-size:11px;color:#64748B">Raju Sir</span></td>
@@ -752,6 +809,7 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
       <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Close Bagmati VDC agreement</div><div class="task-note">Active conversation. Suraj Dhakal responsible. Push to close before FY end Jul 16.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-amber">Jun 2026</span><span class="task-due">Suraj D.</span></div></div>
       <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Contact ADBL for CSR budget — HRDC deployment with Khagendra</div><div class="task-note">HRDC visited Jun 2. Ready for deployment. Option: ADBL CSR fund or free deployment decision needed.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-blue">Jun 2026</span><span class="task-due">Abi</span></div></div>
       <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Budhanilkantha — Abi to identify top-level contact path (not via Raghav Sir)</div><div class="task-note">Raghav Sir cannot influence at Upamayor level. Abi must lead with direct contacts from top level.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-amber">Jun 2026</span><span class="task-due">Abi</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Deliver 15 Valley municipality introductory letters + secure meetings</div><div class="task-note">Letters ready (Shrawan 1, 2083). Log delivery + response per municipality. Dedupe the two Tarakeshwar letters. Where a warm contact exists, route through it. Track which convert to meetings — this is the FY 2083–84 sales-target funnel entry point.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-green">Ready to deliver</span><span class="task-due">Suraj D.</span></div></div>
     </div>
     <div class="task-group">
       <div class="task-group-header"><span>Phase 1–2 — H2 new pipeline (Aug 2026–Mar 2027)</span></div>
@@ -841,6 +899,8 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
   <div class="page" id="page-impl">
     <div class="section-head"><h2 class="section-title">Implementation & Customer Success</h2><div class="section-line"></div><span class="section-tag">Gokarneshwor · Sunday classes priority</span></div>
     <div class="info-box info-amber">Sunday Live Classes is P1 priority for Gokarneshwor. Pre-enroll minimum 15 students per session before launch. Do NOT launch without confirmed enrollment. 3 new Gokarneshwor schools must be onboarded before Sunday classes launch.</div>
+    <div class="info-box info-green"><strong>🆕 Gokarneshwor field update — mid-Jul 2026:</strong> <strong>16 school accounts created</strong> in Gokarneshwor. Teachers &amp; students onboarded at <strong>Khagendra, Chamunda, Okhreni, and Tarabhir (Tarevir)</strong>. Khagendra: Kiran Dhital Sir now running <strong>4 classes daily</strong> (from Jul 14) — strong independent adoption. Sunday class held (1 class by Kiran Sir) but <strong>only 4–5 students interested</strong>. <span style="color:#991B1B"><strong>Device barrier surfacing:</strong> several students have no personal device — parents own only smartphones and are unavailable during class hours.</span> <em>(Tarevir/Tarabhir appear to be the same school under two spellings — worth confirming so the pipeline isn't double-counted.)</em></div>
+    <div class="info-box info-green"><strong>🎯 Weekly target — Jul 18–25, 2026: 20 classes.</strong> <strong>10 from Adarsha Kanya</strong> (LMC) + <strong>10 from Khagendra</strong> (Gokarneshwor), each <strong>streamed live to multiple schools and students</strong>. Uses the two strongest schools as broadcast hubs so one class reaches many. Track: classes actually delivered, receiving schools, and student attendance per session — this is also the first real dataset for the payable-class / incentive rules.</div>
     <!-- SCHOOL STATUS TABLE -->
     <div class="section-head"><h2 class="section-title">School implementation — current status</h2><div class="section-line"></div><span class="section-tag">Updated Jun 2, 2026</span></div>
     <table class="growth-table">
@@ -861,8 +921,8 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
         <tr style="background:#ECFDF5">
           <td><strong>⚠️ Khagendra</strong><br><span style="font-size:11px;color:#64748B">Anchor school</span></td>
           <td><span class="pill pill-amber">Active — adoption issues</span></td>
-          <td style="font-size:12px;color:#334155">Visited Jun 18. LAN fixed by electrician — <strong>but internet speed still slow, upgrade needed.</strong> Only Kiran Dhital Sir has used Abhyas independently. <strong>Teacher groupism</strong> — teachers won't learn from peers. No schedule prepared. Device list not procured. Principal has not pushed adoption. Demo class held with Tarabhir + Okhreni + HRDC joining. Classes run only with Abhyas team support. WhatsApp group created.</td>
-          <td style="font-size:12px;color:#065F46">Jul 8: teacher re-training done ✅ + PR package presented to Raghav Sir &amp; Kiran Sir. Upgrade internet speed. Maintain Sunday class schedule.</td>
+          <td style="font-size:12px;color:#334155">Visited Jun 18. LAN fixed by electrician — <strong>but internet speed still slow, upgrade needed.</strong> <strong>Jul 14: Kiran Dhital Sir now running 4 classes daily via Abhyas independently</strong> — best adoption case in the network. Other teachers still lag (groupism, no schedule). Demo class held with Tarabhir + Okhreni + HRDC joining. WhatsApp group created. <span style="color:#991B1B"><strong>Device gap:</strong> some students have no device; parents own smartphones but are unavailable during class time.</span></td>
+          <td style="font-size:12px;color:#065F46">Leverage Kiran Sir as internal champion to pull other teachers in. Upgrade internet speed. Address student device access. Maintain Sunday schedule.</td>
         </tr>
         <tr style="background:#ECFDF5">
           <td><strong>✅ Tarabhir Basic School</strong><br><span style="font-size:11px;color:#64748B">Ward 3, Gokarneshwor</span></td>
@@ -891,6 +951,41 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
       </tbody>
     </table>
 
+    <!-- CHAMUNDA FOMO PLAN -->
+    <div class="section-head"><h2 class="section-title">Implementation play — create FOMO at Chamunda</h2><div class="section-line"></div><span class="section-tag">Adoption tactic · Jul 2026</span></div>
+    <div class="info-box info-amber"><strong>Why:</strong> Chamunda's leadership re-onboarding is done, but classes still aren't running there — while the rest of the network has visible momentum (Kiran Sir's 4 classes/day at Khagendra, LMC 4 schools live, Okhreni active, HRDC streaming). The lever now is <strong>social proof + fear of missing out:</strong> make Chamunda feel it's the one school being left behind in its own municipality, so adoption becomes their idea, not a push from us.</div>
+
+    <div class="visit-report-card" style="border-color:#FED7AA">
+      <div class="visit-report-header">
+        <div class="visit-report-title">🔥 FOMO levers — Chamunda</div>
+        <span class="visit-date-chip" style="background:#FEF3C7;color:#92400E">Plan</span>
+      </div>
+      <div class="finding-block">
+        <div class="finding-label"><span class="risk-chip rc-amber">Show the momentum they're missing</span></div>
+        <div class="finding-text">
+          <div class="insight-row"><span class="insight-icon">1️⃣</span><div class="insight-body"><strong>Bring the peer proof to them.</strong> Show Chamunda leadership a short reel/screenshots of Kiran Sir running 4 classes/day, the Sunday classes, HRDC streaming, and other Gokarneshwor + LMC schools live. Frame: "here's what's happening across the municipality this month."</div></div>
+          <div class="insight-row"><span class="insight-icon">2️⃣</span><div class="insight-body"><strong>Have them watch a live class.</strong> Invite the Chamunda principal/VP + 1–2 teachers to sit in on one of Kiran Sir's live classes — seeing a peer teacher succeed in real time is far stronger than a pitch.</div></div>
+          <div class="insight-row"><span class="insight-icon">3️⃣</span><div class="insight-body"><strong>Make recognition visible.</strong> The PR package + principal/teacher recognition given at Khagendra should be seen by Chamunda. Peers getting acknowledged (and now the NPR 500/class incentive) is a concrete thing they're missing out on.</div></div>
+          <div class="insight-row"><span class="insight-icon">4️⃣</span><div class="insight-body"><strong>Use municipal visibility as gentle pressure.</strong> The Shiksha Adhikrit can see which schools are active. Being named as the inactive school in municipal reporting is a status cost Chamunda will want to avoid — surface this tactfully, not as a threat.</div></div>
+          <div class="insight-row"><span class="insight-icon">5️⃣</span><div class="insight-body"><strong>Offer a first-mover moment.</strong> Feature the first Chamunda live class in the WhatsApp group, social media, and any CSR/donor documentation (e.g. Gaunthali event, HRDC story) — give them a reason to move now to be included.</div></div>
+        </div>
+      </div>
+      <div class="finding-block">
+        <div class="finding-label"><span class="risk-chip rc-blue">Guardrail</span></div>
+        <div class="finding-text">
+          <div class="insight-row"><span class="insight-icon">⚖️</span><div class="insight-body">Keep it aspirational, not shaming. FOMO works when it's "look what you could be part of," not public embarrassment — Chamunda leadership needs to stay a willing partner. Pair every comparison with concrete hands-on support so the gap feels closeable, not humiliating.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="task-group">
+      <div class="task-group-header"><span>🔥 Chamunda FOMO — action steps</span></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Compile a 1–2 min "network momentum" reel/deck for Chamunda</div><div class="task-note">Kiran Sir 4 classes/day + Sunday classes + Okhreni + LMC live + HRDC streaming. Screenshots/short clips. This is the FOMO artifact.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-red">This week</span><span class="task-due">Suraj D.</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Invite Chamunda principal/VP + teachers to observe a live Khagendra class</div><div class="task-note">Coordinate with Raghav Sir / Kiran Sir for a session Chamunda can sit in on. Seeing peers succeed live is the strongest lever.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-amber">Jul 2026</span><span class="task-due">Suraj D. / Raghav Sir</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Surface Chamunda's activity status in the municipal picture (tactfully)</div><div class="task-note">Via Shiksha Adhikrit Bir Bahadur Khadka — position Chamunda as the school yet to activate, so leadership feels the gap without being publicly shamed.</div></div><div class="task-right"><span class="priority-p2">P2</span><span class="pill pill-amber">Jul 2026</span><span class="task-due">Suraj D.</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Set a target date for Chamunda's first live class + hands-on support</div><div class="task-note">Convert the FOMO into a commitment: agree a date, then be on-site/on-call to make the first class succeed so momentum sticks.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-amber">Jul 2026</span><span class="task-due">Suraj D.</span></div></div>
+    </div>
+
     <!-- SUNDAY CLASS OUTCOMES -->
     <div class="section-head"><h2 class="section-title">Sunday Live Classes — learnings</h2><div class="section-line"></div><span class="section-tag">First class Jun 7, 2026 · Kiran Dhital Sir · Maths</span></div>
 
@@ -918,6 +1013,27 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
       </div>
     </div>
 
+    <div class="visit-report-card" style="border-color:#FED7AA">
+      <div class="visit-report-header">
+        <div class="visit-report-title">🎓 Sunday class — mid-July 2026 · Kiran Dhital Sir</div>
+        <span class="visit-date-chip" style="background:#FEF3C7;color:#92400E">Jul 2026</span>
+      </div>
+      <div class="finding-block">
+        <div class="finding-label"><span class="risk-chip rc-amber">Result</span> Interest: only 4–5 students</div>
+        <div class="finding-text">
+          <div class="insight-row"><span class="insight-icon">✅</span><div class="insight-body">Kiran Sir conducted 1 Sunday class. Weekday adoption is strong — he now runs <strong>4 classes/day</strong> on Abhyas.</div></div>
+          <div class="insight-row"><span class="insight-icon">⚠️</span><div class="insight-body"><strong>Only 4–5 students interested</strong> in Sunday classes. Voluntary weekend attendance remains the weak point despite the Thursday-creation process.</div></div>
+          <div class="insight-row"><span class="insight-icon">📱</span><div class="insight-body"><strong>Device access is the real blocker:</strong> some students have no device of their own; their parents own only smartphones — and those parents are not home / available during class hours. So even willing students can't join from home.</div></div>
+        </div>
+      </div>
+      <div class="finding-block">
+        <div class="finding-label"><span class="risk-chip rc-blue">Implication</span></div>
+        <div class="finding-text">
+          <div class="insight-row"><span class="insight-icon">💡</span><div class="insight-body">Home-based Sunday attendance depends on device access, not just interest. Options to evaluate: run Sunday classes <strong>from the school computer lab / smart-board room</strong> instead of home; a shared-device rota; or shift timing to when a parent's phone is available. This is the same device constraint appearing at LMC — worth treating as a network-wide access issue, not a per-school one.</div></div>
+        </div>
+      </div>
+    </div>
+
     <div class="task-group">
       <div class="task-group-header"><span>🌟 Sunday Live Classes — updated process</span></div>
       <div class="task-row" onclick="toggleT(this)"><div class="task-check" style="background:var(--green);border-color:var(--green)"></div><div class="task-body"><div class="task-name done-text">Chamunda re-onboarding at leadership level ✅ Done</div></div><div class="task-right"><span class="pill pill-green">Done</span></div></div>
@@ -933,8 +1049,12 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
       <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Khagendra — prepare full schedule for Sunday + weekday classes via Abhyas</div><div class="task-note">Raghav Sir to prepare a proper weekly schedule for all classes running through the platform.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-amber">Jun 2026</span><span class="task-due">Raghav Sir</span></div></div>
       <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Khagendra to coordinate and schedule classes for HRDC engagement</div><div class="task-note">HRDC is ready for deployment. Khagendra coordinates the joint class schedule for disability students.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-blue">Jun 2026</span><span class="task-due">Raghav Sir + Abhyas</span></div></div>
       <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Prepare student profile for HRDC — next week</div><div class="task-note">Document HRDC student population: disability types, current education access, platform readiness.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-red">Next week</span><span class="task-due">Abhyas team</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check" style="background:var(--green);border-color:var(--green)"></div><div class="task-body"><div class="task-name done-text">✅ Tarevir (Tarabhir) Basic School — teachers &amp; students onboarded</div><div class="task-note">Confirm Tarevir and Tarabhir are the same school so the count isn't duplicated.</div></div><div class="task-right"><span class="pill pill-green">Done ✓</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">🎯 Deliver 20 classes Jul 18–25 — 10 Adarsha Kanya + 10 Khagendra, streamed to multiple schools</div><div class="task-note">Use both schools as broadcast hubs. Confirm receiving schools + student list per session. Log delivered count, reach, and attendance — first dataset toward payable-class criteria.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-red">Jul 18–25</span><span class="task-due">Suraj D.</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Run a paid student survey (NPR 500) — diagnose why students don't join remote/Sunday classes</div><div class="task-note">Pay NPR 500 to get a survey of students collected (e.g. via a teacher/champion). Goal: find the real root cause — device access, interest, timing, parent availability, or awareness — before deciding the fix. This is the evidence step that the device-access solution below depends on.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-red">This week</span><span class="task-due">Suraj D.</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Solve student device access for Sunday / home classes — network-wide</div><div class="task-note">Recurring blocker at Khagendra + LMC: students have no device; parents' smartphones unavailable during class time. Evaluate: run sessions from school lab/smart-board room, shared-device rota, or reschedule to device-available hours.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-red">This week</span><span class="task-due">Suraj D.</span></div></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Investigate student sign-up failures (LMC)</div><div class="task-note">LMC students report being unable to sign up. Check whether this is the known Google sign-up / role-selection bug or a new issue. Log to Product if reproducible.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-amber">This week</span><span class="task-due">Suraj / Product</span></div></div>
       <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Identify and onboard 2nd new school (smart board + internet confirmed)</div><div class="task-note">Municipality has suggested a school with smart board + internet. Name not yet confirmed. Identify and proceed.</div></div><div class="task-right"><span class="priority-p2">P2</span><span class="pill pill-amber">Jun 2026</span><span class="task-due">Suraj D.</span></div></div>
-      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Onboard Tarevir Basic School</div></div><div class="task-right"><span class="priority-p2">P2</span><span class="pill pill-amber">Jun 2026</span><span class="task-due">Suraj D.</span></div></div>
     </div>
   </div>
 
@@ -1108,7 +1228,7 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
             <div style="font-family:var(--font-mono);font-size:9px;color:#64748B;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px">What needs to happen before build starts</div>
             <div class="prod-ms"><div class="prod-dot" style="background:var(--amber)"></div><div class="prod-ms-text">Teacher pain point research — what exactly is the burden?</div><div class="prod-ms-date">Jul 2026</div></div>
             <div class="prod-ms"><div class="prod-dot" style="background:var(--amber)"></div><div class="prod-ms-text">MVP scope defined — homework + exam + evaluation (Godawari requirement R3)</div><div class="prod-ms-date">Aug 2026</div></div>
-            <div class="prod-ms"><div class="prod-dot" style="background:var(--amber)"></div><div class="prod-ms-text">Teacher incentive model defined — how much, when, who pays?</div><div class="prod-ms-date">Aug 2026</div></div>
+            <div class="prod-ms"><div class="prod-dot" style="background:var(--amber)"></div><div class="prod-ms-text">Teacher incentive — interim: NPR 500/class, min 15 classes/mo ✓ · <strong>payable-class criteria still to define</strong></div><div class="prod-ms-date">Aug 2026</div></div>
             <div class="prod-ms"><div class="prod-dot" style="background:#CBD5E1"></div><div class="prod-ms-text">Scope + incentive model approved → build approved</div><div class="prod-ms-date">TBD</div></div>
             <div class="prod-ms"><div class="prod-dot" style="background:#CBD5E1"></div><div class="prod-ms-text">Build starts — pending approval above</div><div class="prod-ms-date">TBD</div></div>
           </div>
@@ -1448,6 +1568,12 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
     <table class="dec-table">
       <thead><tr><th>Decision</th><th>Answer</th><th>Roadmap impact</th></tr></thead>
       <tbody>
+        <tr style="background:#ECFDF5"><td style="color:var(--text2)"><strong>🆕 Diagnose low remote attendance</strong></td><td class="dec-val">Pay NPR 500 for a student survey</td><td class="dec-impact">Collect a survey of students to find the main reason they don't join Sunday / remote classes (device, interest, timing, parent availability, awareness). Evidence before committing to a fix — feeds the device-access decision.</td></tr>
+        <tr style="background:#ECFDF5"><td style="color:var(--text2)"><strong>🆕 LMC teacher engagement trial</strong></td><td class="dec-val">Trial session + lunch pack + incentives · ~20 teachers · 4 schools</td><td class="dec-impact">Hands-on session across the 4 LMC schools to convert inactive teachers into class-runners. Date/time fixed with each principal. Addresses the low teacher-seriousness issue. Incentive form + budget: Bimochan.</td></tr>
+        <tr style="background:#ECFDF5"><td style="color:var(--text2)"><strong>🆕 Teacher incentive rate</strong></td><td class="dec-val">NPR 500 / class (temporary)</td><td class="dec-impact">Interim rate for classes delivered under the program. Answers the "how much" the incentive model had open. Marked temporary — revisit once outcome data + budget are firmer.</td></tr>
+        <tr style="background:#ECFDF5"><td style="color:var(--text2)"><strong>🆕 Monthly threshold to qualify for payment</strong></td><td class="dec-val">Min. 15 classes / month per teacher</td><td class="dec-impact">A teacher must deliver at least 15 classes in a month to be eligible for the incentive. Requires reliable per-teacher class tracking on the platform.</td></tr>
+        <tr style="background:#ECFDF5"><td style="color:var(--text2)"><strong>🆕 Class cadence per school</strong></td><td class="dec-val">≥ 1 class daily per school</td><td class="dec-impact">Baseline activity target so schools stay live daily, not sporadic. Feeds the 15/month teacher threshold.</td></tr>
+        <tr style="background:#ECFDF5"><td style="color:var(--text2)"><strong>🆕 Schools per municipality (target)</strong></td><td class="dec-val">4 schools each</td><td class="dec-impact">Firms the earlier "~4 avg" into a target of 4 schools per contracted municipality.</td></tr>
         <tr><td style="color:var(--text2)">Pipeline school count per municipality</td><td class="dec-val">~4 schools avg</td><td class="dec-impact">~20 schools total · NPR ~4.3L/yr from current pipeline</td></tr>
         <tr><td style="color:var(--text2)">Designer</td><td class="dec-val">Rahul (Figma)</td><td class="dec-impact">Rahul critical path: Jun 15 (P1 Figma) + Jun 30 (P2 Classrooms Figma)</td></tr>
         <tr><td style="color:var(--text2)">Classrooms module — existing or new?</td><td class="dec-val">Net-new build</td><td class="dec-impact">Phase 2 full build. Rahul's Jun 30 Figma is the hard gate for dev start.</td></tr>
@@ -1461,6 +1587,7 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
     </table>
     <div class="section-head"><h2 class="section-title">Open question</h2><div class="section-line"></div></div>
     <div class="task-group">
+      <div class="task-row"><div class="task-body"><div class="task-name">🔴 OPEN — Define what counts as a "payable class"</div><div class="task-note">The NPR 500/class rate and the 15-classes/month threshold both depend on this. Need clear, verifiable criteria before payout: e.g. minimum duration, minimum student attendance/enrolment, live vs recorded, subject/grade in scope, per-teacher-per-day cap to prevent gaming. Decide before the incentive goes live so tracking can be built to match.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-red">Decide first</span></div></div>
       <div class="task-row"><div class="task-body"><div class="task-name">Q10 — Target revenue for FY 2082–83</div><div class="task-note">Does NPR ~4.3L/yr from current pipeline meet the team's internal revenue target? Bimochan to confirm. Needed to finalize H2 sales plan for FY 2083–84.</div></div><div class="task-right"><span class="pill pill-amber">Bimochan</span></div></div>
     </div>
   </div>
@@ -3179,8 +3306,27 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
 
     <!-- NEXT ACTIONS -->
     <div class="section-head"><h2 class="section-title">Next actions — LMC</h2><div class="section-line"></div></div>
+
+    <div class="info-box info-blue"><strong>🆕 Decision — LMC teacher engagement trial:</strong> Run a hands-on trial/training session across the <strong>4 LMC schools</strong> targeting <strong>~20 teachers</strong>, with a <strong>lunch pack + light incentives</strong> to drive turnout and seriousness. Directly addresses the documented "teachers didn't participate / didn't take training seriously" issue. <strong>Date &amp; time to be fixed with each school principal</strong> so it lands inside school hours and has leadership backing.</div>
+
+    <div class="visit-report-card" style="border-color:#BFDBFE">
+      <div class="visit-report-header">
+        <div class="visit-report-title">🍱 LMC teacher trial session — plan</div>
+        <span class="visit-date-chip" style="background:#DBEAFE;color:#1E40AF">Decision · Jul 2026</span>
+      </div>
+      <div class="finding-block">
+        <div class="finding-text">
+          <div class="insight-row"><span class="insight-icon">👥</span><div class="insight-body"><strong>~20 teachers</strong> across the 4 LMC schools (Adarsha Kanya, Shree Minnath, Shramik Bal Bigyan, Adarsha Saula Yuwak).</div></div>
+          <div class="insight-row"><span class="insight-icon">🍱</span><div class="insight-body"><strong>Lunch pack + light incentives</strong> to attract attendance and signal the session is worth their time — counters the low-seriousness problem seen in the first onboarding.</div></div>
+          <div class="insight-row"><span class="insight-icon">📅</span><div class="insight-body"><strong>Date &amp; time fixed with each principal</strong> — pin it inside school hours with leadership present, so attendance isn't left to individual choice.</div></div>
+          <div class="insight-row"><span class="insight-icon">🎯</span><div class="insight-body">Goal: convert onboarded-but-inactive teachers into active class-runners — especially unlock <strong>Adarsha Saula Yuwak</strong> (36 keen students, 0 teachers so far).</div></div>
+        </div>
+      </div>
+    </div>
+
     <div class="task-group">
       <div class="task-group-header"><span>Open items</span></div>
+      <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Fix date + time for LMC teacher trial session with each principal</div><div class="task-note">~20 teachers, 4 schools. Lunch pack + incentives. Confirm slot inside school hours with principal backing. Decide incentive form/budget with Bimochan.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-red">This week</span><span class="task-due">Suraj D.</span></div></div>
       <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Resolve municipality letter issue — 2 schools waiting</div><div class="task-note">Escalate to Raju Sir: either LMC provides the letter OR communicates officially to schools that the MOU is sufficient. These 2 schools cannot be onboarded until this is resolved.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-red">This week</span><span class="task-due">Abi / Suraj</span></div></div>
       <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Adarsha Saula Yuwak — follow up for teacher onboarding</div><div class="task-note">36 students onboarded but zero teachers. Without teachers running classes, student onboarding is wasted. Get a committed time slot from the principal.</div></div><div class="task-right"><span class="priority-p1">P1</span><span class="pill pill-red">This week</span><span class="task-due">Suraj D.</span></div></div>
       <div class="task-row" onclick="toggleT(this)"><div class="task-check"></div><div class="task-body"><div class="task-name">Schedule refresher training for all 4 LMC schools</div><div class="task-note">Per the formal report recommendation — regular refresher sessions to consolidate adoption. Coordinate with school management committees.</div></div><div class="task-right"><span class="priority-p2">P2</span><span class="pill pill-amber">Next 2 weeks</span><span class="task-due">Suraj D.</span></div></div>
@@ -3202,7 +3348,7 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
       <span class="visit-date-chip" style="background:#DBEAFE;color:#1E40AF;font-size:11px;padding:5px 12px">Proposed · Jul 11, 2026</span>
     </div>
 
-    <div class="info-box info-blue"><strong>Proposal submitted to Apple Entertainment Pvt. Ltd.</strong> (Wipasna Shrestha, Executive Director) on 2083 Ashadh 28 · QFX Cinemas letter also sent. Abhyas proposes to take ~60 girls from Adarsha Kanya Niketan Secondary School (Class 8–10) to watch the Nepali film "Gauthali" at QFX Cinemas, Pulchok — a film about a young girl who uses education to fight child marriage and rebuild her life.</div>
+    <div class="info-box info-blue"><strong>Updated proposal submitted to Apple Entertainment Pvt. Ltd. + QFX Cinemas</strong> (dated 2083 Ashadh 28). Abhyas proposes to take <strong>~70 students (Class 7–10)</strong> from Adarsha Kanya Niketan Secondary School — plus 5 teachers and 5 Abhyas reps (~80 total) — to watch the Nepali film "Gauthali" at QFX Cinemas, Pulchok. Proposed date: <strong>Shrawan 8, 2083 (Friday), 2:00 PM</strong> (est.). The film — about a girl who uses education to fight child marriage and rebuild her life — anchors an experiential-learning + social-awareness activity. Roles: Abhyas organiser; <strong>Apple Entertainment ticket support</strong>; QFX hall &amp; show-time; Adarsha Kanya student selection.</div>
 
     <!-- WHAT + WHY -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
@@ -3254,7 +3400,7 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
         </tr>
         <tr>
           <td><strong>Adarsha Kanya Niketan Secondary School</strong></td>
-          <td>Participant selection — Class 8, 9, 10 girls (~45 students) + 3 teachers</td>
+          <td>Participant selection — Class 7–10 students (~70) + 5 teachers</td>
           <td>School administration · LMC Ward</td>
           <td><span class="pill pill-blue">To be informed after Apple confirms</span></td>
         </tr>
@@ -3265,14 +3411,14 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
     <div class="section-head"><h2 class="section-title">Event details</h2><div class="section-line"></div></div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px">
       <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:14px;text-align:center">
-        <div style="font-family:var(--font-display);font-size:28px;font-weight:700;color:#1E40AF">~60</div>
+        <div style="font-family:var(--font-display);font-size:28px;font-weight:700;color:#1E40AF">~80</div>
         <div style="font-size:11px;color:#1E40AF;font-weight:600">Total participants</div>
-        <div style="font-size:10px;color:#64748B;margin-top:3px">45 students + 3 teachers + 5 Abhyas + 7 others</div>
+        <div style="font-size:10px;color:#64748B;margin-top:3px">70 students (Class 7–10) + 5 teachers + 5 Abhyas reps</div>
       </div>
       <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:14px;text-align:center">
-        <div style="font-family:var(--font-display);font-size:28px;font-weight:700;color:#1E40AF">Shrawan</div>
-        <div style="font-size:11px;color:#1E40AF;font-weight:600">Proposed month</div>
-        <div style="font-size:10px;color:#64748B;margin-top:3px">Film releases Jul 17 (Shrawan 2083). Show-time to be confirmed with QFX.</div>
+        <div style="font-family:var(--font-display);font-size:22px;font-weight:700;color:#1E40AF">Shrawan 8</div>
+        <div style="font-size:11px;color:#1E40AF;font-weight:600">Proposed date · 2083</div>
+        <div style="font-size:10px;color:#64748B;margin-top:3px">Friday, 2:00 PM (est.) · subject to QFX show-time confirmation</div>
       </div>
       <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:14px;text-align:center">
         <div style="font-family:var(--font-display);font-size:28px;font-weight:700;color:#1E40AF">QFX</div>
@@ -3287,7 +3433,7 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
       <div class="finding-block">
         <div class="finding-text">
           <div class="insight-row"><span class="insight-icon">1️⃣</span><div class="insight-body"><strong>Pre-screening briefing</strong> — short orientation on the film's themes. What to watch for, why it matters.</div></div>
-          <div class="insight-row"><span class="insight-icon">2️⃣</span><div class="insight-body"><strong>Collective film screening at QFX</strong> — "Gauthali" watched together by all 60 participants.</div></div>
+          <div class="insight-row"><span class="insight-icon">2️⃣</span><div class="insight-body"><strong>Collective film screening at QFX</strong> — "Gauthali" watched together by all ~80 participants.</div></div>
           <div class="insight-row"><span class="insight-icon">3️⃣</span><div class="insight-body"><strong>Post-screening reflection session</strong> — discussion on child marriage and the role of education. Students share reactions.</div></div>
           <div class="insight-row"><span class="insight-icon">4️⃣</span><div class="insight-body"><strong>Written feedback collection</strong> — students write short responses. Best responses recognized and encouraged.</div></div>
           <div class="insight-row"><span class="insight-icon">5️⃣</span><div class="insight-body"><strong>Photo/video documentation</strong> + social media coverage mentioning QFX Cinemas and Apple Entertainment brand.</div></div>
@@ -3313,6 +3459,7 @@ body{font-family:var(--font-body);background:var(--surface);color:var(--text);mi
 // ── NAVIGATION ──────────────────────────────────────
 const pages = {
   overview:{title:'Dashboard',crumb:'/ overview'},
+  meetings:{title:'Meeting Minutes — Weekly (Thu 3 PM)',crumb:'/ meetings'},
   sales:{title:'Sales & Pipeline',crumb:'/ tracks / sales'},
   erdcn:{title:'ERDCN Partnership',crumb:'/ tracks / erdcn'},
   impl:{title:'Implementation',crumb:'/ tracks / implementation'},
